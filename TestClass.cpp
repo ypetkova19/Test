@@ -24,8 +24,6 @@ class TestClass
         int var2;
         // double var3;
         // double var4;
-        int max_sum_value;
-        int max_diff_value;
         int max_average_value;
         int max_square_root_value;
 
@@ -36,8 +34,6 @@ class TestClass
         {
             var1 = a;
             var2 = b;
-            max_sum_value = 16;
-            max_diff_value = 5;
             max_average_value = 10;
             max_square_root_value = 7;
         }
