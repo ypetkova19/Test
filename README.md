@@ -21,3 +21,7 @@ else //print error message with exception
 ## STEP 4: Create a string name comparison.
 Example:
 string test = "hello world";
+
+## STEP 5: Compiling...
+g++ -g TestClass.cpp -o TestClass.exe
+./TestClass.exe
