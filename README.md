@@ -24,4 +24,6 @@ string test = "hello world";
 
 ## STEP 5: Compiling...
 g++ -g TestClass.cpp -o TestClass.exe
+OR
+g++ -o TestClass TestClass.cpp
 ./TestClass.exe
