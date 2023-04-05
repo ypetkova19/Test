@@ -1,13 +1,17 @@
 #include <iostream>
-using namespace std;
+#include <cmath>
+#include <cassert>  
+
+using namespace std; //use std::cout
 
 #define FILE (__FILE__)
 #define LINE (__LINE__)
 
-#define LOG_LENGTH (300)
+// #define LOG_LENGTH (300)
+const int LOG_LENGTH = 300;
 
-void print_log(const char* filename,
-               int    line,
+void print_log(const char *filename,
+               int         line,
                const char *message)
 {
     printf("F:%s L:%d : %s\n", filename, line, message);
@@ -15,24 +19,36 @@ void print_log(const char* filename,
 
 class TestClass
 {
-    public:
+    private:
         int var1;
         int var2;
         double var3;
         double var4;
-        int range = 10;
+        int max_average_value;
+        int max_square_root_value;
+
+    public:
+    //get and set functions are public
 
         TestClass(int a, int b)
         {
             var1 = a;
             var2 = b;
+            max_average_value = 10;
+            max_square_root_value = 7;
         }
 
+        //do not create constructors with same number of parameters, ideally different number of parameters
         TestClass(double a, double b)
         {
             var3 = a;
             var4 = b;
         }
+
+        // double getSum(double var1, double var2)
+        // {
+        //     return (var3 + var4);
+        // }
 
         int getSum(void)
         {
@@ -49,25 +65,38 @@ class TestClass
             return (var1 * var2);
         }
 
-        // double getSum(double var1, double var2)
-        // {
-        //     return (var3 + var4);
-        // }
-
-        void getQuotientAndRemainder(int *quotient, int *remainer)
+        int getSquareRoot(void)
         {
-            if ((quotient == NULL) && (remainer == NULL))
+            return sqrt(getProduct());
+        }
+
+        bool isSquareRootOfProductWithinDesiredMaxValue(void)
+        {
+            if (getSquareRoot() > max_square_root_value)
             {
-                print_log(FILE, LINE, "NULL ptr");
+                return false;
             }
+            return true;
+        }
+
+        // void getQuotientAndRemainder(int *quotient, int *remainer)
+        void getQuotientAndRemainder(int &quotient, int &remainer)
+        {
+            // if ((quotient == NULL) && (remainer == NULL))
+            // {
+            //     print_log(FILE, LINE, "NULL ptr");
+            // }
 
             if (var2 == 0)
             {
                 print_log(FILE, LINE, "Error: cannot divide by zero.");
             }
 
-            *quotient = var1 / var2;
-            *remainer = var1 % var2;
+            // *quotient = var1 / var2;
+            // *remainer = var1 % var2;
+
+            quotient = var1 / var2;
+            remainer = var1 % var2;
         } 
 
         int getAverage(void)
@@ -75,26 +104,29 @@ class TestClass
             return ((var1 + var2)/2);
         }
 
-        bool isAverageWithinDesiredRange(void)
+        bool isAverageWithinDesiredMaxValue(void) //remove void
         {
-            if (getAverage() > range)
+            if (getAverage() > max_average_value)
             {
-                // printf("ERROR: Average outside of range. [range=%d]", range);
+                // printf("ERROR: Average outside of max_average_value. [max_average_value=%d]", max_average_value);
                 return false;
             }
             return true;
         }
 
-        int getRangeValue(void)
+        int getMaxRangeValue(void)
         {
-            return range;
+            return max_average_value;
+        }
+
+        int getMaxSquareRootValue(void)
+        {
+            return max_square_root_value;
         }
 };
 
-
-
-int main() {
-
+int main() 
+{
     // calling the function
     //tbd();
 
@@ -115,7 +147,8 @@ int main() {
 
     printf("Working with integers: %d and %d\n", a, b);
 
-    //Add error checking...
+    //Add error checking to user input... as we cannot divide by zero.
+    assert(b != 0);
 
     TestClass test1(a, b);
     printf("Sum: %d\n", test1.getSum());
@@ -124,6 +157,27 @@ int main() {
 
     printf("Product: %d\n", test1.getProduct());
 
+    int quotient;
+    int remainder;
+    // test1.getQuotientAndRemainder(&quotient, &remainder);
+    test1.getQuotientAndRemainder(quotient, remainder);
+
+    char message[LOG_LENGTH] = {0};
+    snprintf(message, LOG_LENGTH, "quotient=%d, remainder=%d", quotient, remainder);
+    print_log(FILE, LINE, message);
+
+    printf("Average: %d\n", test1.getAverage());
+
+    printf("Average is %s max_average_value. [max_average_value=%d]\n", 
+            (test1.isAverageWithinDesiredMaxValue() == true) ? "WITHIN" : "OUTSIDE OF",
+            test1.getMaxRangeValue());
+
+    printf("Square root: %d\n", test1.getSquareRoot());
+
+    printf("Square root is %s max_square_root_value. [max_square_root_value=%d]\n", 
+            (test1.isSquareRootOfProductWithinDesiredMaxValue() == true) ? "WITHIN" : "OUTSIDE OF",
+            test1.getMaxSquareRootValue());
+
 #if 0
     double x = 8.0;
     double y = 5.5;
@@ -131,30 +185,6 @@ int main() {
     TestClass test2(x, y);
     printf("%f\n", test2.getSum(x, y));
 #endif
-
-    int quotient;
-    int remainder;
-    test1.getQuotientAndRemainder(&quotient, &remainder);
-
-    //QN: HOW DO I MAKE A FUNCTION WITH VARIABLE NUMBER OF PARAMS? CAN THAT BE DONE? OR IS MACRO THE BEST WAY TO GO HERE?
-    char message[LOG_LENGTH] = {0};
-    snprintf(message, LOG_LENGTH, "quotient=%d, remainder=%d", quotient, remainder);
-    print_log(FILE, LINE, message);
-
-    printf("Average: %d\n", test1.getAverage());
-
-    
-
-    // bool is_within_range = test1.isAverageWithinDesiredRange();
-
-    // if (is_within_range == true)
-    // {
-    // }
-
-    printf("Average is %s range. [range=%d]\n", 
-            (test1.isAverageWithinDesiredRange() == true) ? "WITHIN" : "OUTSIDE OF",
-            test1.getRangeValue());
-    
 
     return 0;
 }
