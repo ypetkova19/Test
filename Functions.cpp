@@ -93,7 +93,7 @@ int Functions::getProduct(int a, int b)
     return (a * b);
 }
 
-unsigned int Functions::getSquareRoot(int a, int b)
+unsigned int Functions::getSquareRootOfProduct(int a, int b)
 {
     // missing exception for negative values
     int product = Functions::getProduct(a, b);
@@ -106,7 +106,7 @@ unsigned int Functions::getSquareRoot(int a, int b)
 
 bool Functions::isSquareRootOfProductWithinDesiredMaxValue(int a, int b)
 {
-    if (Functions::getSquareRoot(a, b) > Functions::get_mMax_square_root_value())
+    if (Functions::getSquareRootOfProduct(a, b) > Functions::get_mMax_square_root_value())
     {
         return false;
     }
