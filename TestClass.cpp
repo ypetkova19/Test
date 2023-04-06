@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
-#include <cassert>  
-#include <string>  
+#include <cassert>
+#include <string>
 #include <stdexcept>
 #include "Functions.hpp"
 
@@ -39,7 +39,7 @@ class TestClass
         }
 };
 
-int main() 
+int main()
 {
     print_log(FILE, LINE, "Test print");
 

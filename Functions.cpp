@@ -116,7 +116,7 @@ bool Functions::isSquareRootOfProductWithinDesiredMaxValue(int a, int b)
 /* pass by reference */
 void Functions::getQuotientAndRemainder(int a, int b, int &quotient, int &remainder)
 {
-    try 
+    try
     {
         if (b == 0)
         {
@@ -133,11 +133,11 @@ void Functions::getQuotientAndRemainder(int a, int b, int &quotient, int &remain
 
     quotient = a / b;
     remainder = a % b;
-} 
+}
 
 double Functions::getDividedValue(int a, int b)
 {
-    try 
+    try
     {
         if (b == 0)
         {

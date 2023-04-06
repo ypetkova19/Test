@@ -1,9 +1,9 @@
 /************************************************
  * File       : Functions.h
- * Description: This file contains function 
+ * Description: This file contains function
  *              prototypes.
  ************************************************/
-#include <string>  
+#include <string>
 
 const int LOG_LENGTH = 300;
 
