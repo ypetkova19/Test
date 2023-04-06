@@ -39,7 +39,7 @@ class Functions
         bool isAverageWithinDesiredMaxValue(int a, int b);
         int getDifference(int a, int b);
         int getProduct(int a, int b);
-        unsigned int getSquareRootOfProduct(int a, int b);
+        double getSquareRootOfProduct(int a, int b);
         bool isSquareRootOfProductWithinDesiredMaxValue(int a, int b);
         void getQuotientAndRemainder(int a, int b, int &quotient, int &remainder);
         double getDividedValue(int a, int b);

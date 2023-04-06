@@ -22,14 +22,14 @@ Functions::Functions()
     mVar2 = 0;
     mMax_average_value = 0;
     mMax_square_root_value = 0;
-    std::cout << "Default Constructor created" << std::endl;
+    std::cout << "Functions Default Constructor created" << std::endl;
 }
 
 Functions::Functions(int a, int b): mVar1(a), mVar2(b)
 {
     mMax_average_value = 0;
     mMax_square_root_value = 0;
-    std::cout << "Constructor created. mVar1=" << mVar1 << ", mVar2="<< mVar2 << std::endl;
+    std::cout << "Functions Constructor created. mVar1=" << mVar1 << ", mVar2="<< mVar2 << std::endl;
 }
 
 void Functions::set_mVar1(int value)
@@ -93,13 +93,21 @@ int Functions::getProduct(int a, int b)
     return (a * b);
 }
 
-unsigned int Functions::getSquareRootOfProduct(int a, int b)
+double Functions::getSquareRootOfProduct(int a, int b)
 {
     // missing exception for negative values
     int product = Functions::getProduct(a, b);
-    if ( product < 0 )
+    try
     {
-        throw std::invalid_argument("sqrt received negative argument");
+        if ( product < 0 )
+        {
+            throw std::invalid_argument("getSquareRootOfProduct received negative argument");
+        }
+    }
+    catch (const std::invalid_argument& e)
+    {
+        print_log(FILE, LINE, "Error: cannot take square root of negative value.");
+        return -1;
     }
     return sqrt(product);
 }

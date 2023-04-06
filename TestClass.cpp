@@ -23,21 +23,64 @@ class TestClass
         {
             mVar1 = 0;
             mVar2 = 0;
-            std::cout << "Default Constructor created" << std::endl;
+            std::cout << "TestClass Default Constructor created" << std::endl;
         }
 
         TestClass(int a, int b): mVar1(a), mVar2(b)
         {
             mMax_average_value = 10;
             mMax_square_root_value = 7;
-            std::cout << "Constructor created. mVar1=" << mVar1 << " mVar2="<< mVar2 << std::endl;
+            std::cout << "TestClass Constructor created. mVar1=" << mVar1 << " mVar2="<< mVar2 << std::endl;
         }
 
-        bool test_getSum(int a, int b)
+        void test_getSum()
         {
             std::cout << "Testing Functions::getSum()" << std::endl;
-            // return IS_TRUE((Functions::getSum(a, b)) == (a+b))
-            return true;
+
+            /* UT: Positive and Positive */
+            int a = 8;
+            int b = 9;
+
+            std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
+
+            Functions test1(a, b);
+            IS_TRUE(test1.getSum(a, b) == (a+b))
+
+            /* UT: Positive and Negative */
+            a = 8;
+            b = -9; //changed
+
+            std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
+
+            test1.set_mVar2(b);
+            IS_TRUE(test1.getSum(a, b) == (a+b))
+
+            /* UT: Negative and Negative */
+            a = -8; //changed
+            b = -9;
+
+            std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
+
+            test1.set_mVar1(a);
+            IS_TRUE(test1.getSum(a, b) == (a+b))
+
+            /* UT: Negative and Positive */
+            a = -8;
+            b = 9; //changed
+
+            std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
+
+            test1.set_mVar2(b);
+            IS_TRUE(test1.getSum(a, b) == (a+b))
+
+            /* UT: Perfect Square */
+            a = 9; //changed
+            b = 9;
+
+            std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
+
+            test1.set_mVar1(a);
+            IS_TRUE(test1.getSum(a, b) == (a+b))
         }
 };
 
@@ -45,16 +88,20 @@ int main()
 {
     print_log(FILE, LINE, "Test print");
 
-    int a;
-    int b;
+    // int a;
+    // int b;
 
-    std::cout << "Enter first integer value: ";
-    std::cin >> a;
-    std::cout << "Enter second integer value: ";
-    std::cin >> b;
+    // std::cout << "Enter first integer value: ";
+    // std::cin >> a;
+    // std::cout << "Enter second integer value: ";
+    // std::cin >> b;
 
-    std::cout << "Working with integers: " << a << " and " << b << std::endl;
+    // std::cout << "Working with integers: " << a << " and " << b << std::endl;
 
+    TestClass myTest;
+    myTest.test_getSum();
+
+#if 0
     /* create object of type Functions */
     Functions test1(a, b);
     std::cout << "Sum: " << test1.getSum(a, b) << std::endl;
@@ -82,8 +129,9 @@ int main()
 
     std::cout << "Square root: " << test1.getSquareRootOfProduct(a, b) << std::endl;
     IS_TRUE(test1.getSquareRootOfProduct(a, b) == (sqrt(a*b)))
+    // std::cout << "getSquareRootOfProduct(a*b): " << test1.getSquareRootOfProduct(a, b) << ", sqrt(a*b): " << sqrt(a*b) << std::endl;
 
     std::cout << "Square root is " << ((test1.isSquareRootOfProductWithinDesiredMaxValue(a, b) == true) ? "WITHIN" : "OUTSIDE OF") << " max_square_root_value. [max_square_root_value=" << test1.get_mMax_square_root_value() << "]" << std::endl;
-
+#endif
     return 0;
 }
