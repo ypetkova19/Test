@@ -80,6 +80,11 @@ void TestClass::test_getSum()
     std::cout << "End..." << std::endl;
 }
 
+/*****************************************************************
+ *
+ * Function: test_valid_getSum
+ *
+ *****************************************************************/
 void TestClass::test_valid_getSum()
 {
     /* UT: Positive and Positive */
@@ -132,11 +137,16 @@ void TestClass::test_valid_getSum()
 
 }
 
+/*****************************************************************
+ *
+ * Function: test_invalid_getSum
+ *
+ *****************************************************************/
 void TestClass::test_invalid_getSum()
 {
     Functions test1;
 
-    // UT: Overflow with positive values
+    /* UT: Overflow with positive values */
 
     int a = INT_MAX;
     int b = TEST_CLASS_POSITIVE_VALUE;
@@ -152,7 +162,7 @@ void TestClass::test_invalid_getSum()
         std::cout << "F:" << FILE << " L:" << LINE << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
     }
 
-    // UT: Overflow with negative values
+    /* UT: Overflow with negative values */
 
     a = INT_MIN;
     b = TEST_CLASS_NEGATIVE_VALUE;
@@ -168,7 +178,6 @@ void TestClass::test_invalid_getSum()
         std::cout << "F:" << FILE << " L:" << LINE << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
     }
 }
-
 
 /*****************************************************************
  *
@@ -187,12 +196,12 @@ void TestClass::test_getAverage()
 
     std::cout << std::endl << "Testing GOOD Weather..." << std::endl;
     std::cout << "Start..." << std::endl;
-    test_valid_getSum();
+    // test_valid_getAverage();
     std::cout << "End..." << std::endl;
 
     std::cout << std::endl << "Testing BAD Weather..." << std::endl;
     std::cout << "Start..." << std::endl;
-    test_invalid_getSum();
+    // test_invalid_getAverage();
     std::cout << "End..." << std::endl;
 
 
