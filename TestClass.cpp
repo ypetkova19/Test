@@ -151,44 +151,6 @@ void TestClass::test_invalid_getSum()
     test1.set_mVar2(b);
     IS_TRUE(test1.getSum(a, b) == (a+b))
 
-#if 0
-    /* UT: Positive and Negative */
-    a = TEST_CLASS_POS_NEG_VAR_1;
-    b = TEST_CLASS_POS_NEG_VAR_2; //changed
-
-    std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
-
-    test1.set_mVar2(b);
-    IS_TRUE(test1.getSum(a, b) == (a+b))
-
-    /* UT: Negative and Negative */
-    a = TEST_CLASS_NEG_NEG_VAR_1; //changed
-    b = TEST_CLASS_NEG_NEG_VAR_2;
-
-    std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
-
-    test1.set_mVar1(a);
-    IS_TRUE(test1.getSum(a, b) == (a+b))
-
-    /* UT: Negative and Positive */
-    a = TEST_CLASS_NEG_POS_VAR_1;
-    b = TEST_CLASS_NEG_POS_VAR_2; //changed
-
-    std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
-
-    test1.set_mVar2(b);
-    IS_TRUE(test1.getSum(a, b) == (a+b))
-
-    /* UT: Perfect Square */
-    a = TEST_CLASS_PERFECT_SQUARE_VAR_1; //changed
-    b = TEST_CLASS_PERFECT_SQUARE_VAR_2;
-
-    std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
-
-    test1.set_mVar1(a);
-    IS_TRUE(test1.getSum(a, b) == (a+b))
-#endif
-
     std::cout << "End..." << std::endl;
 }
 
