@@ -1,7 +1,8 @@
 #include <iostream>
 #include <cmath>
-#include "Functions.hpp"
 #include <stdexcept>
+
+#include "Functions.hpp"
 
 #ifndef FUNCTIONS_HPP_INCLUDED
 #define FUNCTIONS_HPP_INCLUDED

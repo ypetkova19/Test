@@ -1,5 +1,5 @@
 /************************************************
- * File       : Functions.h
+ * File       : Functions.hpp
  * Description: This file contains function
  *              prototypes.
  ************************************************/
