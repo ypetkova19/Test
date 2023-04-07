@@ -58,24 +58,28 @@ TestClass::TestClass(int a, int b, int c, unsigned int d): mVar1(a), mVar2(b), m
  *
  * Description: Tests sum mathematic operation.
  *
- * Valid UT inputs: Any positive or negative integer value.
+ * Valid UT inputs: Any positive or negative integer value (includes: chars and decimals)
  *
- * Invalid UT inputs: Chars, decimal values
+ * Invalid UT inputs: None
  *
  *****************************************************************/
 void TestClass::test_getSum()
 {
     std::cout << std::endl << "Testing Functions::getSum()" << std::endl;
 
+    std::cout << std::endl << "Testing GOOD Weather..." << std::endl;
+    std::cout << "Start..." << std::endl;
     test_valid_getSum();
+    std::cout << "End..." << std::endl;
 
+    std::cout << std::endl << "Testing BAD Weather..." << std::endl;
+    std::cout << "Start..." << std::endl;
     test_invalid_getSum();
+    std::cout << "End..." << std::endl;
 }
 
 void TestClass::test_valid_getSum()
 {
-    std::cout << std::endl << "Testing GOOD Weather..." << std::endl;
-    std::cout << "Start..." << std::endl;
 
     /* UT: Positive and Positive */
     int a = TEST_CLASS_POS_POS_VAR_1;
@@ -85,8 +89,8 @@ void TestClass::test_valid_getSum()
 
     std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
 
-    test1.set_mVar1(a);
-    test1.set_mVar2(b);
+    // test1.set_mVar1(a);
+    // test1.set_mVar2(b);
     IS_TRUE(test1.getSum(a, b) == (a+b))
 
     /* UT: Positive and Negative */
@@ -95,7 +99,7 @@ void TestClass::test_valid_getSum()
 
     std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
 
-    test1.set_mVar2(b);
+    // test1.set_mVar2(b);
     IS_TRUE(test1.getSum(a, b) == (a+b))
 
     /* UT: Negative and Negative */
@@ -104,7 +108,7 @@ void TestClass::test_valid_getSum()
 
     std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
 
-    test1.set_mVar1(a);
+    // test1.set_mVar1(a);
     IS_TRUE(test1.getSum(a, b) == (a+b))
 
     /* UT: Negative and Positive */
@@ -113,7 +117,7 @@ void TestClass::test_valid_getSum()
 
     std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
 
-    test1.set_mVar2(b);
+    // test1.set_mVar2(b);
     IS_TRUE(test1.getSum(a, b) == (a+b))
 
     /* UT: Perfect Square */
@@ -122,43 +126,50 @@ void TestClass::test_valid_getSum()
 
     std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
 
-    test1.set_mVar1(a);
+    // test1.set_mVar1(a);
     IS_TRUE(test1.getSum(a, b) == (a+b))
 
-    std::cout << "End..." << std::endl;
 }
 
 void TestClass::test_invalid_getSum()
 {
-    std::cout << std::endl << "Testing BAD Weather..." << std::endl;
-    std::cout << "Start..." << std::endl;
+    // Functions test1;
 
-    /* UT: chars */
-    // TEST_CLASS_CHAR_VALUE
-    // TEST_CLASS_DOUBLE_VALUE
+    // // char a = TEST_CLASS_CHAR_VALUE;
+    // int a = INT_MAX+1;
+    // int b = TEST_CLASS_DOUBLE_VALUE;
 
-    Functions test1;
+    // std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
 
-//QN: WHO'S JOB IS IT TO CHECK THAT THE INPUT VALUE IS NOT THE RIGHT TYPE? FUNCTIONS?
-//QN2: WHAT'S THE MOST EFFECTIVE WAY TO CHECK WHETHER INPUT IS ACTUALLY AN INT (WHEN EXPECTING INT)?
-
-    char a = TEST_CLASS_CHAR_VALUE;
-    int b = TEST_CLASS_POS_POS_VAR_2;
-
-    std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
-
-    test1.set_mVar1(a);
-    test1.set_mVar2(b);
-    IS_TRUE(test1.getSum(a, b) == (a+b))
-
-    std::cout << "End..." << std::endl;
+    // IS_TRUE(test1.getSum(a, b) == (a+b))
 }
 
 
-
+/*****************************************************************
+ *
+ * Function: test_getAverage
+ *
+ * Description: Tests sum mathematic operation.
+ *
+ * Valid UT inputs: Any positive or negative integer value (includes: chars and decimals)
+ *
+ * Invalid UT inputs: None
+ *
+ *****************************************************************/
 void TestClass::test_getAverage()
 {
     std::cout << std::endl << "Testing Functions::getAverage()" << std::endl;
+
+    std::cout << std::endl << "Testing GOOD Weather..." << std::endl;
+    std::cout << "Start..." << std::endl;
+    test_valid_getSum();
+    std::cout << "End..." << std::endl;
+
+    std::cout << std::endl << "Testing BAD Weather..." << std::endl;
+    std::cout << "Start..." << std::endl;
+    test_invalid_getSum();
+    std::cout << "End..." << std::endl;
+
 
     /* UT: Positive and Positive */
     int a = TEST_CLASS_POS_POS_VAR_1;
@@ -568,14 +579,14 @@ int main()
 
     TestClass myTest;
     myTest.test_getSum();
-    // myTest.test_getAverage();
-    // myTest.test_isAverageWithinDesiredMaxValue();
-    // myTest.test_getDifference();
-    // myTest.test_getProduct();
-    // myTest.test_getSquareRootOfProduct();
-    // myTest.test_isSquareRootOfProductWithinDesiredMaxValue();
-    // myTest.test_getDividedValue();
-    // myTest.test_calculateQuotientAndRemainder();
+    myTest.test_getAverage();
+    myTest.test_isAverageWithinDesiredMaxValue();
+    myTest.test_getDifference();
+    myTest.test_getProduct();
+    myTest.test_getSquareRootOfProduct();
+    myTest.test_isSquareRootOfProductWithinDesiredMaxValue();
+    myTest.test_getDividedValue();
+    myTest.test_calculateQuotientAndRemainder();
 
     return 0;
 }

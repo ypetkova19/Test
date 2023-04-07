@@ -29,6 +29,8 @@ class Functions
         void set_mMax_average_value(int value);
         void set_mMax_square_root_value(unsigned int value);
 
+        int get_mVar1();
+        int get_mVar2();
         int get_mMax_average_value();
         int get_mMax_square_root_value();
 

@@ -19,8 +19,8 @@ void print_log(std::string filename,
 
 Functions::Functions()
 {
-    mVar1 = 0;
-    mVar2 = 0;
+    mVar1 = 0; /* unused */
+    mVar2 = 0; /* unused */
     mMax_average_value = 0;
     mMax_square_root_value = 0;
     std::cout << std::endl << "Functions Default Constructor created" << std::endl;
@@ -49,6 +49,16 @@ void Functions::set_mMax_average_value(int value)
 void Functions::set_mMax_square_root_value(unsigned int value)
 {
     mMax_square_root_value = value;
+}
+
+int Functions::get_mVar1()
+{
+    return mVar1;
+}
+
+int Functions::get_mVar2()
+{
+    return mVar2;
 }
 
 int Functions::get_mMax_average_value()
