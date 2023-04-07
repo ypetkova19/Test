@@ -75,7 +75,15 @@ int Functions::get_mMax_square_root_value()
 
 int Functions::getSum(int a, int b)
 {
-    return (a + b);
+    int sum = a + b;
+
+    if (((a > 0) && (b > 0) && (sum < 0)) ||
+        ((a < 0) && (b < 0) && (sum > 0)))
+    {
+        throw std::overflow_error("Stack overflow!");
+    }
+
+    return sum;
 }
 
 int Functions::getAverage(int a, int b)

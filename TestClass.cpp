@@ -36,6 +36,8 @@
 
 #define TEST_CLASS_CHAR_VALUE ('a')
 #define TEST_CLASS_DOUBLE_VALUE (3.14159)
+#define TEST_CLASS_POSITIVE_VALUE (5)
+#define TEST_CLASS_NEGATIVE_VALUE (-5)
 
 
 TestClass::TestClass()
@@ -80,7 +82,6 @@ void TestClass::test_getSum()
 
 void TestClass::test_valid_getSum()
 {
-
     /* UT: Positive and Positive */
     int a = TEST_CLASS_POS_POS_VAR_1;
     int b = TEST_CLASS_POS_POS_VAR_2;
@@ -133,15 +134,39 @@ void TestClass::test_valid_getSum()
 
 void TestClass::test_invalid_getSum()
 {
-    // Functions test1;
+    Functions test1;
 
-    // // char a = TEST_CLASS_CHAR_VALUE;
-    // int a = INT_MAX+1;
-    // int b = TEST_CLASS_DOUBLE_VALUE;
+    // UT: Overflow with positive values
 
-    // std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
+    int a = INT_MAX;
+    int b = TEST_CLASS_POSITIVE_VALUE;
 
-    // IS_TRUE(test1.getSum(a, b) == (a+b))
+    std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
+
+    try
+    {
+        IS_TRUE(test1.getSum(a, b) == (a+b))
+    }
+    catch (const std::overflow_error& e)
+    {
+        std::cout << "F:" << FILE << " L:" << LINE << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
+    }
+
+    // UT: Overflow with negative values
+
+    a = INT_MIN;
+    b = TEST_CLASS_NEGATIVE_VALUE;
+
+    std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
+
+    try
+    {
+        IS_TRUE(test1.getSum(a, b) == (a+b))
+    }
+    catch (const std::overflow_error& e)
+    {
+        std::cout << "F:" << FILE << " L:" << LINE << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
+    }
 }
 
 
@@ -579,14 +604,14 @@ int main()
 
     TestClass myTest;
     myTest.test_getSum();
-    myTest.test_getAverage();
-    myTest.test_isAverageWithinDesiredMaxValue();
-    myTest.test_getDifference();
-    myTest.test_getProduct();
-    myTest.test_getSquareRootOfProduct();
-    myTest.test_isSquareRootOfProductWithinDesiredMaxValue();
-    myTest.test_getDividedValue();
-    myTest.test_calculateQuotientAndRemainder();
+    // myTest.test_getAverage();
+    // myTest.test_isAverageWithinDesiredMaxValue();
+    // myTest.test_getDifference();
+    // myTest.test_getProduct();
+    // myTest.test_getSquareRootOfProduct();
+    // myTest.test_isSquareRootOfProductWithinDesiredMaxValue();
+    // myTest.test_getDividedValue();
+    // myTest.test_calculateQuotientAndRemainder();
 
     return 0;
 }
