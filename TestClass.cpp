@@ -1,6 +1,6 @@
 #include <iostream>
-#include <math.h> //check c++ version - check syntax
-#include <cassert> //check c++ version - check syntax
+#include <cmath>
+#include <cassert>
 #include <string>
 #include <stdexcept>
 #include <limits>
@@ -34,6 +34,9 @@
 #define TEST_CLASS_MAX_AVERAGE_VALUE (10)
 #define TEST_CLASS_MAX_SQRT_VALUE (7)
 
+#define TEST_CLASS_CHAR_VALUE ('a')
+#define TEST_CLASS_DOUBLE_VALUE (3.14159)
+
 
 TestClass::TestClass()
 {
@@ -49,9 +52,30 @@ TestClass::TestClass(int a, int b, int c, unsigned int d): mVar1(a), mVar2(b), m
     std::cout << "TestClass Constructor created. mVar1=" << mVar1 << ", mVar2="<< mVar2 << ", mMax_average_value="<< mMax_average_value << ", mMax_square_root_value="<< mMax_square_root_value << std::endl << std::endl;
 }
 
+/*****************************************************************
+ *
+ * Function: test_getSum
+ *
+ * Description: Tests sum mathematic operation.
+ *
+ * Valid UT inputs: Any positive or negative integer value.
+ *
+ * Invalid UT inputs: Chars, decimal values
+ *
+ *****************************************************************/
 void TestClass::test_getSum()
 {
     std::cout << std::endl << "Testing Functions::getSum()" << std::endl;
+
+    test_valid_getSum();
+
+    test_invalid_getSum();
+}
+
+void TestClass::test_valid_getSum()
+{
+    std::cout << std::endl << "Testing GOOD Weather..." << std::endl;
+    std::cout << "Start..." << std::endl;
 
     /* UT: Positive and Positive */
     int a = TEST_CLASS_POS_POS_VAR_1;
@@ -100,7 +124,75 @@ void TestClass::test_getSum()
 
     test1.set_mVar1(a);
     IS_TRUE(test1.getSum(a, b) == (a+b))
+
+    std::cout << "End..." << std::endl;
 }
+
+void TestClass::test_invalid_getSum()
+{
+    std::cout << std::endl << "Testing BAD Weather..." << std::endl;
+    std::cout << "Start..." << std::endl;
+
+    /* UT: chars */
+    // TEST_CLASS_CHAR_VALUE
+    // TEST_CLASS_DOUBLE_VALUE
+
+    Functions test1;
+
+//QN: WHO'S JOB IS IT TO CHECK THAT THE INPUT VALUE IS NOT THE RIGHT TYPE? FUNCTIONS?
+//QN2: WHAT'S THE MOST EFFECTIVE WAY TO CHECK WHETHER INPUT IS ACTUALLY AN INT (WHEN EXPECTING INT)?
+
+    char a = TEST_CLASS_CHAR_VALUE;
+    int b = TEST_CLASS_POS_POS_VAR_2;
+
+    std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
+
+    test1.set_mVar1(a);
+    test1.set_mVar2(b);
+    IS_TRUE(test1.getSum(a, b) == (a+b))
+
+#if 0
+    /* UT: Positive and Negative */
+    a = TEST_CLASS_POS_NEG_VAR_1;
+    b = TEST_CLASS_POS_NEG_VAR_2; //changed
+
+    std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
+
+    test1.set_mVar2(b);
+    IS_TRUE(test1.getSum(a, b) == (a+b))
+
+    /* UT: Negative and Negative */
+    a = TEST_CLASS_NEG_NEG_VAR_1; //changed
+    b = TEST_CLASS_NEG_NEG_VAR_2;
+
+    std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
+
+    test1.set_mVar1(a);
+    IS_TRUE(test1.getSum(a, b) == (a+b))
+
+    /* UT: Negative and Positive */
+    a = TEST_CLASS_NEG_POS_VAR_1;
+    b = TEST_CLASS_NEG_POS_VAR_2; //changed
+
+    std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
+
+    test1.set_mVar2(b);
+    IS_TRUE(test1.getSum(a, b) == (a+b))
+
+    /* UT: Perfect Square */
+    a = TEST_CLASS_PERFECT_SQUARE_VAR_1; //changed
+    b = TEST_CLASS_PERFECT_SQUARE_VAR_2;
+
+    std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
+
+    test1.set_mVar1(a);
+    IS_TRUE(test1.getSum(a, b) == (a+b))
+#endif
+
+    std::cout << "End..." << std::endl;
+}
+
+
 
 void TestClass::test_getAverage()
 {
@@ -514,14 +606,14 @@ int main()
 
     TestClass myTest;
     myTest.test_getSum();
-    myTest.test_getAverage();
-    myTest.test_isAverageWithinDesiredMaxValue();
-    myTest.test_getDifference();
-    myTest.test_getProduct();
-    myTest.test_getSquareRootOfProduct();
-    myTest.test_isSquareRootOfProductWithinDesiredMaxValue();
-    myTest.test_getDividedValue();
-    myTest.test_calculateQuotientAndRemainder();
+    // myTest.test_getAverage();
+    // myTest.test_isAverageWithinDesiredMaxValue();
+    // myTest.test_getDifference();
+    // myTest.test_getProduct();
+    // myTest.test_getSquareRootOfProduct();
+    // myTest.test_isSquareRootOfProductWithinDesiredMaxValue();
+    // myTest.test_getDividedValue();
+    // myTest.test_calculateQuotientAndRemainder();
 
     return 0;
 }

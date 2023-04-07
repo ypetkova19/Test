@@ -20,6 +20,9 @@ class TestClass
         /* Methods */
 
         void test_getSum();
+        void test_valid_getSum();
+        void test_invalid_getSum();
+
         void test_getAverage();
         void test_isAverageWithinDesiredMaxValue();
         void test_getDifference();
