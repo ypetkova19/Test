@@ -11,7 +11,7 @@
 
 void print_log(std::string filename,
                int         line,
-               const char *message)
+               std::string message)
 {
     std::cout << "F:" << filename << " L:" << line << ": " << message << std::endl;
 }
@@ -22,14 +22,12 @@ Functions::Functions()
     mVar2 = 0;
     mMax_average_value = 0;
     mMax_square_root_value = 0;
-    std::cout << "Functions Default Constructor created" << std::endl;
+    std::cout << std::endl << "Functions Default Constructor created" << std::endl;
 }
 
-Functions::Functions(int a, int b): mVar1(a), mVar2(b)
+Functions::Functions(int a, int b, int c, unsigned int d): mVar1(a), mVar2(b), mMax_average_value(c), mMax_square_root_value(d)
 {
-    mMax_average_value = 0;
-    mMax_square_root_value = 0;
-    std::cout << "Functions Constructor created. mVar1=" << mVar1 << ", mVar2="<< mVar2 << std::endl;
+    std::cout << std::endl << "Functions Constructor created. mVar1=" << mVar1 << ", mVar2="<< mVar2 << std::endl;
 }
 
 void Functions::set_mVar1(int value)
@@ -47,7 +45,7 @@ void Functions::set_mMax_average_value(int value)
     mMax_average_value = value;
 }
 
-void Functions::set_mMax_square_root_value(int value)
+void Functions::set_mMax_square_root_value(unsigned int value)
 {
     mMax_square_root_value = value;
 }
@@ -106,7 +104,8 @@ double Functions::getSquareRootOfProduct(int a, int b)
     }
     catch (const std::invalid_argument& e)
     {
-        print_log(FILE, LINE, "Error: cannot take square root of negative value.");
+        // print_log(FILE, LINE, "Error: cannot take square root of negative value.");
+        std::cout << "ERROR: F:" << FILE << " L:" << LINE << ": " << "Error: cannot take square root of negative value. [mVar1=" << a << ", mVar2=" << b << ", product=" << product << "]" << std::endl;
         return -1;
     }
     return sqrt(product);
@@ -121,27 +120,82 @@ bool Functions::isSquareRootOfProductWithinDesiredMaxValue(int a, int b)
     return true;
 }
 
+#if 0
 /* pass by reference */
-void Functions::getQuotientAndRemainder(int a, int b, int &quotient, int &remainder)
+//tuples in c++, 2 in 1
+//return tuple
+
+typedef struct
 {
-    try
+    int var;
+} yolina_t;
+
+C
+yolina_t *var = calloc(1, sizeof(*var));
+//equivalent to:
+int* ptr = new int;
+
+free(var)
+
+C++
+yolina_t var = new() //
+delete(var) //from heap
+
+#define DDXA_CREATE(x)
+{
+    x = calloc(1, sizeof(*x));
+}
+#define DDXA_DELETE(x)
+{
+    free(x);
+}
+
+
+
+int array[3];
+array[0] = 0x100
+array[1] = 0x104
+array[2] = 0x108
+
+get(int array[])
+{
+
+}
+#endif
+
+//cost reference
+int Functions::getQuotient(int &a, int &b)
+{
+    if (b == 0)
     {
-        if (b == 0)
-        {
-            throw std::invalid_argument("Second argument is zero.");
-        }
+        throw std::invalid_argument("Second argument is zero.");
+        return false;
     }
-    catch (const std::invalid_argument& e)
+    return (a / b);
+}
+
+int Functions::getRemainder(int &a, int &b)
+{
+    return (a % b);
+}
+
+#if 0
+bool Functions::calculateQuotientAndRemainder(int a, int b, int &quotient, int &remainder)
+{
+    quotient = 0;
+    remainder = 0;
+
+    if (b == 0)
     {
-        quotient = 0;
-        remainder = 0;
-        print_log(FILE, LINE, "Error: cannot divide by zero.");
-        return;
+        throw std::invalid_argument("Second argument is zero.");
+        return false;
     }
 
     quotient = a / b;
     remainder = a % b;
+    return true;
 }
+#endif
 
 double Functions::getDividedValue(int a, int b)
 {
@@ -154,7 +208,8 @@ double Functions::getDividedValue(int a, int b)
     }
     catch (const std::invalid_argument& e)
     {
-        print_log(FILE, LINE, "Error: cannot divide by zero.");
+        // print_log(FILE, LINE, "Error: cannot divide by zero.");
+        std::cout << "ERROR: F:" << FILE << " L:" << LINE << ": " << "Error: cannot divide by zero. [mVar1=" << a << "mVar2=" << b << "]" << std::endl;
         return 0.0;
     }
 

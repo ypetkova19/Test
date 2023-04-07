@@ -9,7 +9,7 @@ const int LOG_LENGTH = 300;
 
 void print_log(std::string filename,
                int         line,
-               const char *message);
+               std::string message);
 
 
 class Functions
@@ -22,12 +22,12 @@ class Functions
 
     public:
         Functions();
-        Functions(int a, int b);
+        Functions(int a, int b, int c, unsigned int d);
 
         void set_mVar1(int value);
         void set_mVar2(int value);
         void set_mMax_average_value(int value);
-        void set_mMax_square_root_value(int value);
+        void set_mMax_square_root_value(unsigned int value);
 
         int get_mMax_average_value();
         int get_mMax_square_root_value();
@@ -41,6 +41,8 @@ class Functions
         int getProduct(int a, int b);
         double getSquareRootOfProduct(int a, int b);
         bool isSquareRootOfProductWithinDesiredMaxValue(int a, int b);
-        void getQuotientAndRemainder(int a, int b, int &quotient, int &remainder);
+        int getQuotient(int &a, int &b);
+        int getRemainder(int &a, int &b);
+        // bool calculateQuotientAndRemainder(int a, int b, int &quotient, int &remainder);
         double getDividedValue(int a, int b);
 };
