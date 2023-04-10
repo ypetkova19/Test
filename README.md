@@ -2,28 +2,74 @@
 
 This Github project will do the following.
 
-## STEP 1: Create sample C++ class for different variable types.
-Example: boolean, int, strings
-
-## STEP 2: Create class functions which perform addition/subtraction/multiplication/division.
+## STEP 1: Create Functions C++ class for different mathematical operations.
 Example:
-int multiply2(a, b)
-{
-    ...
-}
+Functions.cpp
+getSum, getAverage, getDifference, getProduct, getDivisionValue, getSquareRoot, getQuotient, getRemainder, etc...
 
-## STEP 3: Create a boolean test case for numbers > 0 and < 0.
+## STEP 2: Create .HPP header file for each Functions Class.
+
+## STEP 3: Create TestClass C++ class for testing the different methods in Functions Class.
 Example:
-int x = GetSum(3, 5);
-if (x > 0) // print nothing
-else //print error message with exception
+TestClass.cpp
 
-## STEP 4: Create a string name comparison.
+## STEP 4: Create .HPP header file for each TestClass.
+## STEP 5: Create IS_TEST() macro function to compare the success/failure cases.
 Example:
-string test = "hello world";
+IS_TEST(5 == 5) ==> true
+IS_TEST(5 == 6) ==> false
 
-## STEP 5: Compiling...
+## STEP 6: Create TestClass which performs Good weather Unit Tests on each mathematical operation in Functions class.
+Example:
+IS_TEST(getQsrt(5, 5) == sqrt(5*5)) ===> success
+
+## STEP 7: Create TestClass which performs Bad weather Unit Tests on each mathematical operation in Functions class.
+Example:
+IS_TEST(getQsrt(-5, 5) == sqrt(-5*5)) ===> fail, as one cannot take sqrt of a negative value
+
+## STEP 8: Compiling...
+//Compile
 g++ -g TestClass.cpp -o TestClass.exe
 OR
 g++ -o TestClass TestClass.cpp
+//Run
 ./TestClass.exe
+
+OR
+
+//Compile
+g++ *.cpp -o output
+//Run
+./output.exe
+
+OR
+
+Add the following to your BASH file.
+
+In terminal, create file, if it doesn't exist:
+touch ~/.bash_personal
+
+Via terminal, open bash file:
+vim ~/.bash_personal
+
+Add the following to bash file, save, and close.
+==================================
+compile ()
+{
+    echo "Starting compile...";
+    g++ *.cpp -o output
+}
+
+run ()
+{
+    echo "Executing...";
+    echo "  ./output.exe";
+    ./output.exe
+}
+==================================
+
+In Linux terminal:
+source ~/.bash_personal
+
+Execute:
+compile && run
