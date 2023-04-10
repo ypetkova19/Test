@@ -1026,24 +1026,40 @@ void TestClass::test_valid_calculateQuotientAndRemainder()
  *****************************************************************/
 void TestClass::test_invalid_calculateQuotientAndRemainder()
 {
-    /* UT: Positive and Positive */
+    Functions test1;
+
+    /* UT: Test divide by zero */
     int a = TEST_CLASS_POS_POS_VAR_1;
     int b = 0;
-
-    Functions test1;
 
     std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
 
     try
     {
         IS_TRUE(test1.getQuotient(a, b) == (a/b))
+        IS_TRUE(test1.getRemainder(a, b) == (a%b))
     }
     catch (const std::invalid_argument& e)
     {
         std::cout << "F:" << FILE << " L:" << LINE << " fn:" << FUNC << " : Expected: catch 'invalid_argument' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
     }
 
-    IS_TRUE(test1.getRemainder(a, b) == (a%b))
+
+    /* UT: Test overflow with INT_MIN and -1 */
+    a = INT_MIN;
+    b = -1;
+
+    std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
+
+    try
+    {
+        IS_TRUE(test1.getQuotient(a, b) == (a/b))
+        IS_TRUE(test1.getRemainder(a, b) == (a%b))
+    }
+    catch (const std::overflow_error& e)
+    {
+        std::cout << "F:" << FILE << " L:" << LINE << " fn:" << FUNC << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
+    }
 
 } /* test_invalid_calculateQuotientAndRemainder */
 

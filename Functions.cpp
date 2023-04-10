@@ -162,8 +162,14 @@ int Functions::getQuotient(int &a, int &b)
     if (b == 0)
     {
         throw std::invalid_argument("Second argument is zero.");
-        return false;
     }
+
+    /* catch 2's complement overflow */
+    if ((a == INT_MIN) && (b == -1))
+    {
+        throw std::overflow_error("Stack overflow!");
+    }
+
     return (a / b);
 }
 
@@ -183,16 +189,13 @@ double Functions::getDividedValue(int a, int b)
     }
     catch (const std::invalid_argument& e)
     {
-        // std::cout << "ERROR: F:" << FILE << " L:" << LINE << " fn:" << FUNC << ": " << "Error: cannot divide by zero. [mVar1=" << a << ", mVar2=" << b << "]" << std::endl;
         return 0.0;
     }
 
     double divided_value = a * 1.0 / b;
 
-    // std::cout << "YOLINA HERE: divided_value=" << divided_value << std::endl;
-
-    if ((b == 0) || ((a == INT_MIN) && (b == -1)))
-    // if ((a != 0) && (a != (b * divided_value)))
+    /* catch 2's complement overflow */
+    if ((a == INT_MIN) && (b == -1))
     {
         throw std::overflow_error("Stack overflow!");
     }
