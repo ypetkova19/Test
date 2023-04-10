@@ -123,7 +123,7 @@ F:TestClass.cpp L:655 fn:test_invalid_getSquareRootOfProduct : Expected: catch '
 Testing with mVar1=-2147483648, mVar2=2147483647
 F:TestClass.cpp L:671 fn:test_invalid_getSquareRootOfProduct : Expected: catch 'overflow_error' [mVar1=-2147483648, mVar2=2147483647]. Actual: Stack overflow! .....PASS
 Testing with mVar1=5, mVar2=-5
-F:TestClass.cpp L:687 fn:test_invalid_getSquareRootOfProduct fn:test_invalid_getSquareRootOfProduct: Error: cannot take square root of negative value. [mVar1=5, mVar2=-5, product=-25]. Actual: getSquareRootOfProduct received negative argument .....PASS
+F:TestClass.cpp L:687 fn:test_invalid_getSquareRootOfProduct: Error: cannot take square root of negative value. [mVar1=5, mVar2=-5, product=-25]. Actual: getSquareRootOfProduct received negative argument .....PASS
 End...
 
 Testing Functions::isSquareRootOfProductWithinDesiredMaxValue()

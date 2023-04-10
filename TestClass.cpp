@@ -684,7 +684,7 @@ void TestClass::test_invalid_getSquareRootOfProduct()
     }
     catch (const std::invalid_argument& e)
     {
-        std::cout << "F:" << FILE << " L:" << LINE << " fn:" << FUNC << " fn:" << FUNC << ": " << "Error: cannot take square root of negative value. [mVar1=" << a << ", mVar2=" << b << ", product=" << (a*b) << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
+        std::cout << "F:" << FILE << " L:" << LINE << " fn:" << FUNC << ": " << "Error: cannot take square root of negative value. [mVar1=" << a << ", mVar2=" << b << ", product=" << (a*b) << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
     }
 } /* test_invalid_getSquareRootOfProduct */
 
