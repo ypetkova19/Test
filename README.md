@@ -44,16 +44,16 @@ g++ *.cpp -o output
 
 OR
 
-Add the following to your BASH file.
+### Add the following to your BASH file.
 
-In terminal, create file, if it doesn't exist:
+#### In terminal, create file, if it doesn't exist:
 touch ~/.bash_personal
 
-Via terminal, open bash file:
+#### Via terminal, open bash file:
 vim ~/.bash_personal
 
-Add the following to bash file, save, and close.
-==================================
+#### Add the following to bash file, save, and close.
+<=====START=====>
 compile ()
 {
     echo "Starting compile...";
@@ -66,10 +66,10 @@ run ()
     echo "  ./output.exe";
     ./output.exe
 }
-==================================
+<=====END=====>
 
-In Linux terminal:
+#### In Linux terminal:
 source ~/.bash_personal
 
-Execute:
+#### Execute:
 compile && run
