@@ -9,7 +9,7 @@
 
 #define FILE (__FILE__)
 #define LINE (__LINE__)
-#define FUNCTION (__func__)
+#define FUNC (__func__)
 
 void print_log(std::string filename,
                int         line,
@@ -136,17 +136,7 @@ int Functions::getProduct(int a, int b)
 
 double Functions::getSquareRootOfProduct(int a, int b)
 {
-    int product = 0;
-
-    // try
-    // {
-        product = Functions::getProduct(a, b);
-    // }
-    // catch (const std::overflow_error& e)
-    // {
-    //     // throw new std::Exception("Exception.", e)
-    //     std::cout << "F:" << FILE << " L:" << LINE << " fn:" << FUNCTION << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
-    // }
+    int product = Functions::getProduct(a, b);
 
     if ( product < 0 )
     {
@@ -159,11 +149,6 @@ double Functions::getSquareRootOfProduct(int a, int b)
 bool Functions::isSquareRootOfProductWithinDesiredMaxValue(int a, int b)
 {
     double square_root = Functions::getSquareRootOfProduct(a, b);
-
-    // if (square_root < 0)
-    // {
-    //     throw std::invalid_argument("getSquareRootOfProduct returned invalid argument");
-    // }
 
     if (square_root > Functions::get_mMax_square_root_value())
     {
@@ -187,24 +172,6 @@ int Functions::getRemainder(int &a, int &b)
     return (a % b);
 }
 
-#if 0 //UNUSED FN AS QUOTIENT AND REMAINDER ARE SPLIT UP NOW
-bool Functions::calculateQuotientAndRemainder(int a, int b, int &quotient, int &remainder)
-{
-    quotient = 0;
-    remainder = 0;
-
-    if (b == 0)
-    {
-        throw std::invalid_argument("Second argument is zero.");
-        return false;
-    }
-
-    quotient = a / b;
-    remainder = a % b;
-    return true;
-}
-#endif
-
 double Functions::getDividedValue(int a, int b)
 {
     try
@@ -216,12 +183,21 @@ double Functions::getDividedValue(int a, int b)
     }
     catch (const std::invalid_argument& e)
     {
-        // print_log(FILE, LINE, "Error: cannot divide by zero.");
-        std::cout << "ERROR: F:" << FILE << " L:" << LINE << ": " << "Error: cannot divide by zero. [mVar1=" << a << "mVar2=" << b << "]" << std::endl;
+        // std::cout << "ERROR: F:" << FILE << " L:" << LINE << " fn:" << FUNC << ": " << "Error: cannot divide by zero. [mVar1=" << a << ", mVar2=" << b << "]" << std::endl;
         return 0.0;
     }
 
-    return (a  * 1.0 / b);
+    double divided_value = a * 1.0 / b;
+
+    // std::cout << "YOLINA HERE: divided_value=" << divided_value << std::endl;
+
+    if ((b == 0) || ((a == INT_MIN) && (b == -1)))
+    // if ((a != 0) && (a != (b * divided_value)))
+    {
+        throw std::overflow_error("Stack overflow!");
+    }
+
+    return divided_value;
 }
 
 #endif

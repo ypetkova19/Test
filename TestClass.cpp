@@ -13,6 +13,7 @@
 
 #define FILE (__FILE__)
 #define LINE (__LINE__)
+#define FUNC (__func__)
 
 #define IS_TRUE(x) { if (!(x)) std::cout << "IS_TRUE_ERROR: " << __FUNCTION__ << " failed on line " << __LINE__ << std::endl; }
 
@@ -63,11 +64,11 @@ TestClass::TestClass(int a, int b, int c, unsigned int d): mVar1(a), mVar2(b), m
  *
  * Function: test_getSum
  *
- * Description: Tests sum mathematic operation.
+ * Description: Tests mathematical operation.
  *
  * Valid UT inputs: Any positive or negative integer value (includes: chars and decimals)
  *
- * Invalid UT inputs: None
+ * Invalid UT inputs: Overflow values
  *
  *****************************************************************/
 void TestClass::test_getSum()
@@ -159,7 +160,7 @@ void TestClass::test_invalid_getSum()
     }
     catch (const std::overflow_error& e)
     {
-        std::cout << "F:" << FILE << " L:" << LINE << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
+        std::cout << "F:" << FILE << " L:" << LINE << " fn:" << FUNC << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
     }
 
     /* UT: Overflow with negative values */
@@ -175,7 +176,7 @@ void TestClass::test_invalid_getSum()
     }
     catch (const std::overflow_error& e)
     {
-        std::cout << "F:" << FILE << " L:" << LINE << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
+        std::cout << "F:" << FILE << " L:" << LINE << " fn:" << FUNC << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
     }
 
 } /* test_invalid_getSum */
@@ -184,11 +185,11 @@ void TestClass::test_invalid_getSum()
  *
  * Function: test_getAverage
  *
- * Description: Tests sum mathematic operation.
+ * Description: Tests mathematical operation.
  *
  * Valid UT inputs: Any positive or negative integer value (includes: chars and decimals)
  *
- * Invalid UT inputs: None
+ * Invalid UT inputs: Overflow values
  *
  *****************************************************************/
 void TestClass::test_getAverage()
@@ -280,7 +281,7 @@ void TestClass::test_invalid_getAverage()
     }
     catch (const std::overflow_error& e)
     {
-        std::cout << "F:" << FILE << " L:" << LINE << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
+        std::cout << "F:" << FILE << " L:" << LINE << " fn:" << FUNC << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
     }
 
     /* UT: Overflow with negative values */
@@ -296,7 +297,7 @@ void TestClass::test_invalid_getAverage()
     }
     catch (const std::overflow_error& e)
     {
-        std::cout << "F:" << FILE << " L:" << LINE << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
+        std::cout << "F:" << FILE << " L:" << LINE << " fn:" << FUNC << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
     }
 
 } /* test_invalid_getAverage */
@@ -327,11 +328,11 @@ void TestClass::test_isAverageWithinDesiredMaxValue()
  *
  * Function: test_getDifference
  *
- * Description: Tests sum mathematic operation.
+ * Description: Tests mathematical operation.
  *
  * Valid UT inputs: Any positive or negative integer value (includes: chars and decimals)
  *
- * Invalid UT inputs: None
+ * Invalid UT inputs: Overflow values
  *
  *****************************************************************/
 void TestClass::test_getDifference()
@@ -423,7 +424,7 @@ void TestClass::test_invalid_getDifference()
     }
     catch (const std::overflow_error& e)
     {
-        std::cout << "F:" << FILE << " L:" << LINE << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
+        std::cout << "F:" << FILE << " L:" << LINE << " fn:" << FUNC << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
     }
 
     /* UT: Overflow with negative values */
@@ -439,7 +440,7 @@ void TestClass::test_invalid_getDifference()
     }
     catch (const std::overflow_error& e)
     {
-        std::cout << "F:" << FILE << " L:" << LINE << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
+        std::cout << "F:" << FILE << " L:" << LINE << " fn:" << FUNC << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
     }
 
 } /* test_invalid_getDifference */
@@ -448,11 +449,11 @@ void TestClass::test_invalid_getDifference()
  *
  * Function: test_getProduct
  *
- * Description: Tests sum mathematic operation.
+ * Description: Tests mathematical operation.
  *
  * Valid UT inputs: Any positive or negative integer value (includes: chars and decimals)
  *
- * Invalid UT inputs: None
+ * Invalid UT inputs: Overflow values
  *
  *****************************************************************/
 void TestClass::test_getProduct()
@@ -544,7 +545,7 @@ void TestClass::test_invalid_getProduct()
     }
     catch (const std::overflow_error& e)
     {
-        std::cout << "F:" << FILE << " L:" << LINE << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
+        std::cout << "F:" << FILE << " L:" << LINE << " fn:" << FUNC << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
     }
 
     /* UT: Overflow with negative values */
@@ -560,7 +561,7 @@ void TestClass::test_invalid_getProduct()
     }
     catch (const std::overflow_error& e)
     {
-        std::cout << "F:" << FILE << " L:" << LINE << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
+        std::cout << "F:" << FILE << " L:" << LINE << " fn:" << FUNC << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
     }
 
 } /* test_invalid_getProduct */
@@ -569,11 +570,11 @@ void TestClass::test_invalid_getProduct()
  *
  * Function: test_getSquareRootOfProduct
  *
- * Description: Tests sum mathematic operation.
+ * Description: Tests mathematical operation.
  *
  * Valid UT inputs: Any positive or negative integer value (includes: chars and decimals)
  *
- * Invalid UT inputs: None
+ * Invalid UT inputs: Negative resulting product
  *
  *****************************************************************/
 void TestClass::test_getSquareRootOfProduct()
@@ -609,8 +610,6 @@ void TestClass::test_valid_getSquareRootOfProduct()
 
     std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
 
-    // test1.set_mVar1(a);
-    // test1.set_mVar2(b);
     IS_TRUE(test1.getSquareRootOfProduct(a, b) == sqrt(a*b))
 
     /* UT: Negative and Negative */
@@ -619,7 +618,6 @@ void TestClass::test_valid_getSquareRootOfProduct()
 
     std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
 
-    // test1.set_mVar1(a);
     IS_TRUE(test1.getSquareRootOfProduct(a, b) == sqrt(a*b))
 
     /* UT: Perfect Square */
@@ -628,7 +626,6 @@ void TestClass::test_valid_getSquareRootOfProduct()
 
     std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
 
-    // test1.set_mVar1(a);
     IS_TRUE(test1.getSquareRootOfProduct(a, b) == sqrt(a*b))
 
 } /* test_valid_getSquareRootOfProduct */
@@ -655,7 +652,7 @@ void TestClass::test_invalid_getSquareRootOfProduct()
     }
     catch (const std::overflow_error& e)
     {
-        std::cout << "F:" << FILE << " L:" << LINE << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
+        std::cout << "F:" << FILE << " L:" << LINE << " fn:" << FUNC << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
     }
 
     /* UT: Overflow with negative values */
@@ -671,7 +668,7 @@ void TestClass::test_invalid_getSquareRootOfProduct()
     }
     catch (const std::overflow_error& e)
     {
-        std::cout << "F:" << FILE << " L:" << LINE << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
+        std::cout << "F:" << FILE << " L:" << LINE << " fn:" << FUNC << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
     }
 
     /* UT: Invalid argument with negative product */
@@ -685,7 +682,7 @@ void TestClass::test_invalid_getSquareRootOfProduct()
     }
     catch (const std::invalid_argument& e)
     {
-        std::cout << "ERROR: F:" << FILE << " L:" << LINE << ": " << "Error: cannot take square root of negative value. [mVar1=" << a << ", mVar2=" << b << ", product=" << (a*b) << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
+        std::cout << "F:" << FILE << " L:" << LINE << " fn:" << FUNC << " fn:" << FUNC << ": " << "Error: cannot take square root of negative value. [mVar1=" << a << ", mVar2=" << b << ", product=" << (a*b) << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
     }
 } /* test_invalid_getSquareRootOfProduct */
 
@@ -693,11 +690,11 @@ void TestClass::test_invalid_getSquareRootOfProduct()
  *
  * Function: test_isSquareRootOfProductWithinDesiredMaxValue
  *
- * Description: Tests sum mathematic operation.
+ * Description: Tests mathematical operation.
  *
  * Valid UT inputs: Any positive or negative integer value (includes: chars and decimals)
  *
- * Invalid UT inputs: None
+ * Invalid UT inputs: Any positive or negative integer value pairs whose square root is larger than desired max sqrt value.
  *
  *****************************************************************/
 void TestClass::test_isSquareRootOfProductWithinDesiredMaxValue()
@@ -782,22 +779,6 @@ void TestClass::test_invalid_isSquareRootOfProductWithinDesiredMaxValue()
 
     IS_TRUE(test1.isSquareRootOfProductWithinDesiredMaxValue(a, b) == true)
 
-    // try
-    // {
-    // }
-    // catch (const std::invalid_argument& e)
-    // {
-    //     std::cout << "ERROR: F:" << FILE << " L:" << LINE << ": " << "Error: calculated sqrt value: " << sqrt(a*b) << " larger than max sqrt value: " << test1.get_mMax_square_root_value() << ". [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
-    // }
-
-    // /* UT: Positive and Negative */
-    // a = TEST_CLASS_POS_NEG_VAR_1;
-    // b = TEST_CLASS_POS_NEG_VAR_2;
-
-    // std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << ", mMaxSquareRootValue=" << d << std::endl;
-
-    // IS_TRUE(test1.isSquareRootOfProductWithinDesiredMaxValue(a, b) == true)
-
     /* UT: Negative and Negative */
     a = TEST_CLASS_NEG_NEG_VAR_1;
     b = TEST_CLASS_NEG_NEG_VAR_2;
@@ -805,14 +786,6 @@ void TestClass::test_invalid_isSquareRootOfProductWithinDesiredMaxValue()
     std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << ", mMaxSquareRootValue=" << d << std::endl;
 
     IS_TRUE(test1.isSquareRootOfProductWithinDesiredMaxValue(a, b) == true)
-
-    // /* UT: Negative and Positive */
-    // a = TEST_CLASS_NEG_POS_VAR_1;
-    // b = TEST_CLASS_NEG_POS_VAR_2;
-
-    // std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << ", mMaxSquareRootValue=" << d << std::endl;
-
-    // IS_TRUE(test1.isSquareRootOfProductWithinDesiredMaxValue(a, b) == true)
 
     /* UT: Perfect Square */
     a = TEST_CLASS_PERFECT_SQUARE_VAR_1;
@@ -828,11 +801,11 @@ void TestClass::test_invalid_isSquareRootOfProductWithinDesiredMaxValue()
  *
  * Function: test_getDividedValue
  *
- * Description: Tests sum mathematic operation.
+ * Description: Tests mathematical operation.
  *
  * Valid UT inputs: Any positive or negative integer value (includes: chars and decimals)
  *
- * Invalid UT inputs: None
+ * Invalid UT inputs: Overflow values
  *
  *****************************************************************/
 void TestClass::test_getDividedValue()
@@ -902,6 +875,14 @@ void TestClass::test_valid_getDividedValue()
 
     IS_TRUE(test1.getDividedValue(a, b) == (a*1.0/b))
 
+    /* UT: Divide zero by number */
+    a = 0; //changed
+    b = TEST_CLASS_PERFECT_SQUARE_VAR_2;
+
+    std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
+
+    IS_TRUE(test1.getDividedValue(a, b) == (a*1.0/b))
+
 } /* test_valid_getDividedValue */
 
 /*****************************************************************
@@ -913,36 +894,35 @@ void TestClass::test_invalid_getDividedValue()
 {
     Functions test1;
 
-    /* UT: Overflow with positive values */
+    /* UT: Overflow with INT_MIN and negative value */
 
     int a = INT_MIN;
-    int b = INT_MAX;
+    int b = -1;
 
     std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
 
     try
     {
-        IS_TRUE(test1.getDividedValue(a, b) == (a*b))
+        IS_TRUE(test1.getDividedValue(a, b) == (a*1.0/b))
     }
     catch (const std::overflow_error& e)
     {
-        std::cout << "F:" << FILE << " L:" << LINE << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
+        std::cout << "F:" << FILE << " L:" << LINE << " fn:" << FUNC << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
     }
 
-    /* UT: Overflow with negative values */
+    /* UT: Divide by zero. */
 
-    a = INT_MAX;
-    b = TEST_CLASS_NEGATIVE_VALUE;
+    a = TEST_CLASS_POSITIVE_VALUE;
+    b = 0;
 
     std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
 
-    try
+    double divided_value = test1.getDividedValue(a, b);
+    IS_TRUE(divided_value != (a*1.0/b))
+
+    if (divided_value == 0.0)
     {
-        IS_TRUE(test1.getDividedValue(a, b) == (a*b))
-    }
-    catch (const std::overflow_error& e)
-    {
-        std::cout << "F:" << FILE << " L:" << LINE << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
+        std::cout << "F:" << FILE << " L:" << LINE << " fn:" << FUNC << " : Expected, as second argument is zero. [mVar1=" << a << ", mVar2=" << b << "]." <<  " .....PASS" << std::endl;
     }
 
 } /* test_invalid_getDividedValue */
@@ -951,7 +931,7 @@ void TestClass::test_invalid_getDividedValue()
  *
  * Function: test_calculateQuotientAndRemainder
  *
- * Description: Tests sum mathematic operation.
+ * Description: Tests mathematical operation.
  *
  * Valid UT inputs: Any positive or negative integer value (includes: chars and decimals)
  *
@@ -1060,7 +1040,7 @@ void TestClass::test_invalid_calculateQuotientAndRemainder()
     }
     catch (const std::invalid_argument& e)
     {
-        std::cout << "F:" << FILE << " L:" << LINE << " : Expected: catch 'invalid_argument' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
+        std::cout << "F:" << FILE << " L:" << LINE << " fn:" << FUNC << " : Expected: catch 'invalid_argument' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
     }
 
     IS_TRUE(test1.getRemainder(a, b) == (a%b))
