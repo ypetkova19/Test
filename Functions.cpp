@@ -9,6 +9,7 @@
 
 #define FILE (__FILE__)
 #define LINE (__LINE__)
+#define FUNCTION (__func__)
 
 void print_log(std::string filename,
                int         line,
@@ -88,7 +89,15 @@ int Functions::getSum(int a, int b)
 
 int Functions::getAverage(int a, int b)
 {
-    return ((a + b)/2);
+    int average = ((a + b)/2);
+
+    if (((a > 0) && (b > 0) && (average < 0)) ||
+        ((a < 0) && (b < 0) && (average > 0)))
+    {
+        throw std::overflow_error("Stack overflow!");
+    }
+
+    return average;
 }
 
 bool Functions::isAverageWithinDesiredMaxValue(int a, int b)
@@ -102,87 +111,67 @@ bool Functions::isAverageWithinDesiredMaxValue(int a, int b)
 
 int Functions::getDifference(int a, int b)
 {
-    return (a - b);
+    int diff = a - b;
+
+    if (((a > 0) && (b < 0) && (diff < 0)) ||
+        ((a < 0) && (b > 0) && (diff > 0)))
+    {
+        throw std::overflow_error("Stack overflow!");
+    }
+
+    return diff;
 }
 
 int Functions::getProduct(int a, int b)
 {
-    return (a * b);
+    int product = a * b;
+
+    if (a != 0 && (b != (product / a)))
+    {
+        throw std::overflow_error("Stack overflow!");
+    }
+
+    return product;
 }
 
 double Functions::getSquareRootOfProduct(int a, int b)
 {
-    // missing exception for negative values
-    int product = Functions::getProduct(a, b);
-    try
+    int product = 0;
+
+    // try
+    // {
+        product = Functions::getProduct(a, b);
+    // }
+    // catch (const std::overflow_error& e)
+    // {
+    //     // throw new std::Exception("Exception.", e)
+    //     std::cout << "F:" << FILE << " L:" << LINE << " fn:" << FUNCTION << " : Expected: catch 'overflow_error' [mVar1=" << a << ", mVar2=" << b << "]. Actual: " << e.what() <<  " .....PASS" << std::endl;
+    // }
+
+    if ( product < 0 )
     {
-        if ( product < 0 )
-        {
-            throw std::invalid_argument("getSquareRootOfProduct received negative argument");
-        }
+        throw std::invalid_argument("getSquareRootOfProduct received negative argument");
     }
-    catch (const std::invalid_argument& e)
-    {
-        // print_log(FILE, LINE, "Error: cannot take square root of negative value.");
-        std::cout << "ERROR: F:" << FILE << " L:" << LINE << ": " << "Error: cannot take square root of negative value. [mVar1=" << a << ", mVar2=" << b << ", product=" << product << "]" << std::endl;
-        return -1;
-    }
+
     return sqrt(product);
 }
 
 bool Functions::isSquareRootOfProductWithinDesiredMaxValue(int a, int b)
 {
-    if (Functions::getSquareRootOfProduct(a, b) > Functions::get_mMax_square_root_value())
+    double square_root = Functions::getSquareRootOfProduct(a, b);
+
+    // if (square_root < 0)
+    // {
+    //     throw std::invalid_argument("getSquareRootOfProduct returned invalid argument");
+    // }
+
+    if (square_root > Functions::get_mMax_square_root_value())
     {
         return false;
     }
     return true;
 }
 
-#if 0
-/* pass by reference */
-//tuples in c++, 2 in 1
-//return tuple
-
-typedef struct
-{
-    int var;
-} yolina_t;
-
-C
-yolina_t *var = calloc(1, sizeof(*var));
-//equivalent to:
-int* ptr = new int;
-
-free(var)
-
-C++
-yolina_t var = new() //
-delete(var) //from heap
-
-#define DDXA_CREATE(x)
-{
-    x = calloc(1, sizeof(*x));
-}
-#define DDXA_DELETE(x)
-{
-    free(x);
-}
-
-
-
-int array[3];
-array[0] = 0x100
-array[1] = 0x104
-array[2] = 0x108
-
-get(int array[])
-{
-
-}
-#endif
-
-//cost reference
 int Functions::getQuotient(int &a, int &b)
 {
     if (b == 0)
@@ -198,7 +187,7 @@ int Functions::getRemainder(int &a, int &b)
     return (a % b);
 }
 
-#if 0
+#if 0 //UNUSED FN AS QUOTIENT AND REMAINDER ARE SPLIT UP NOW
 bool Functions::calculateQuotientAndRemainder(int a, int b, int &quotient, int &remainder)
 {
     quotient = 0;
