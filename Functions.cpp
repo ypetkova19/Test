@@ -140,7 +140,7 @@ double Functions::getSquareRootOfProduct(int a, int b)
 
     if ( product < 0 )
     {
-        throw std::invalid_argument("getSquareRootOfProduct received negative argument");
+        throw std::invalid_argument("Negative product!");
     }
 
     return sqrt(product);
