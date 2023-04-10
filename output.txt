@@ -1,6 +1,6 @@
 Executing...
   ./output.exe
-F:TestClass.cpp L:1069: Test print
+F:TestClass.cpp L:1071: Test print
 
 TestClass Default Constructor created
 
@@ -122,7 +122,8 @@ Testing with mVar1=2147483647, mVar2=2147483647
 F:TestClass.cpp L:655 fn:test_invalid_getSquareRootOfProduct : Expected: catch 'overflow_error' [mVar1=2147483647, mVar2=2147483647]. Actual: Stack overflow! .....PASS
 Testing with mVar1=-2147483648, mVar2=2147483647
 F:TestClass.cpp L:671 fn:test_invalid_getSquareRootOfProduct : Expected: catch 'overflow_error' [mVar1=-2147483648, mVar2=2147483647]. Actual: Stack overflow! .....PASS
-F:TestClass.cpp L:685 fn:test_invalid_getSquareRootOfProduct fn:test_invalid_getSquareRootOfProduct: Error: cannot take square root of negative value. [mVar1=5, mVar2=-5, product=-25]. Actual: getSquareRootOfProduct received negative argument .....PASS
+Testing with mVar1=5, mVar2=-5
+F:TestClass.cpp L:687 fn:test_invalid_getSquareRootOfProduct fn:test_invalid_getSquareRootOfProduct: Error: cannot take square root of negative value. [mVar1=5, mVar2=-5, product=-25]. Actual: getSquareRootOfProduct received negative argument .....PASS
 End...
 
 Testing Functions::isSquareRootOfProductWithinDesiredMaxValue()
@@ -142,11 +143,11 @@ Start...
 
 Functions Default Constructor created
 Testing with mVar1=8, mVar2=9, mMaxSquareRootValue=7
-IS_TRUE_ERROR: test_invalid_isSquareRootOfProductWithinDesiredMaxValue failed on line 780
+IS_TRUE_ERROR: test_invalid_isSquareRootOfProductWithinDesiredMaxValue failed on line 782
 Testing with mVar1=-8, mVar2=-9, mMaxSquareRootValue=7
-IS_TRUE_ERROR: test_invalid_isSquareRootOfProductWithinDesiredMaxValue failed on line 788
+IS_TRUE_ERROR: test_invalid_isSquareRootOfProductWithinDesiredMaxValue failed on line 790
 Testing with mVar1=9, mVar2=9, mMaxSquareRootValue=7
-IS_TRUE_ERROR: test_invalid_isSquareRootOfProductWithinDesiredMaxValue failed on line 796
+IS_TRUE_ERROR: test_invalid_isSquareRootOfProductWithinDesiredMaxValue failed on line 798
 End...
 
 Testing Functions::getDividedValue()
@@ -170,9 +171,9 @@ Start...
 
 Functions Default Constructor created
 Testing with mVar1=-2147483648, mVar2=-1
-F:TestClass.cpp L:910 fn:test_invalid_getDividedValue : Expected: catch 'overflow_error' [mVar1=-2147483648, mVar2=-1]. Actual: Stack overflow! .....PASS
+F:TestClass.cpp L:912 fn:test_invalid_getDividedValue : Expected: catch 'overflow_error' [mVar1=-2147483648, mVar2=-1]. Actual: Stack overflow! .....PASS
 Testing with mVar1=5, mVar2=0
-F:TestClass.cpp L:925 fn:test_invalid_getDividedValue : Expected, as second argument is zero. [mVar1=5, mVar2=0]. .....PASS
+F:TestClass.cpp L:927 fn:test_invalid_getDividedValue : Expected, as second argument is zero. [mVar1=5, mVar2=0]. .....PASS
 End...
 
 Testing Functions::calculateQuotientAndRemainder()
@@ -194,7 +195,7 @@ Start...
 
 Functions Default Constructor created
 Testing with mVar1=8, mVar2=0
-F:TestClass.cpp L:1044 fn:test_invalid_calculateQuotientAndRemainder : Expected: catch 'invalid_argument' [mVar1=8, mVar2=0]. Actual: Second argument is zero. .....PASS
+F:TestClass.cpp L:1046 fn:test_invalid_calculateQuotientAndRemainder : Expected: catch 'invalid_argument' [mVar1=8, mVar2=0]. Actual: Second argument is zero. .....PASS
 Testing with mVar1=-2147483648, mVar2=-1
-F:TestClass.cpp L:1061 fn:test_invalid_calculateQuotientAndRemainder : Expected: catch 'overflow_error' [mVar1=-2147483648, mVar2=-1]. Actual: Stack overflow! .....PASS
+F:TestClass.cpp L:1063 fn:test_invalid_calculateQuotientAndRemainder : Expected: catch 'overflow_error' [mVar1=-2147483648, mVar2=-1]. Actual: Stack overflow! .....PASS
 End...

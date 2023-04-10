@@ -676,6 +676,8 @@ void TestClass::test_invalid_getSquareRootOfProduct()
     a = TEST_CLASS_POSITIVE_VALUE;
     b = TEST_CLASS_NEGATIVE_VALUE;
 
+    std::cout << "Testing with mVar1=" << a << ", mVar2=" << b << std::endl;
+
     try
     {
         IS_TRUE(test1.getSquareRootOfProduct(a, b) == (a*b))
