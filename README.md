@@ -7,13 +7,13 @@ Example:
 Functions.cpp
 getSum, getAverage, getDifference, getProduct, getDivisionValue, getSquareRoot, getQuotient, getRemainder, etc...
 
-## STEP 2: Create .HPP header file for each Functions Class.
+## STEP 2: Create .HPP header file for each method in Functions Class.
 
 ## STEP 3: Create TestClass C++ class for testing the different methods in Functions Class.
 Example:
 TestClass.cpp
 
-## STEP 4: Create .HPP header file for each TestClass.
+## STEP 4: Create .HPP header file for each method in TestClass.
 ## STEP 5: Create IS_TEST() macro function to compare the success/failure cases.
 Example:
 IS_TEST(5 == 5) ==> true
