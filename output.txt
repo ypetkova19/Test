@@ -1,0 +1,201 @@
+Executing...
+  ./output.exe
+F:TestClass.cpp L:1071: Test print
+
+TestClass Default Constructor created
+
+Testing Functions::getSum()
+
+Testing GOOD Weather...
+Start...
+
+Functions Default Constructor created
+Testing with mVar1=8, mVar2=9
+Testing with mVar1=8, mVar2=-9
+Testing with mVar1=-8, mVar2=-9
+Testing with mVar1=-8, mVar2=9
+Testing with mVar1=9, mVar2=9
+End...
+
+Testing BAD Weather...
+Start...
+
+Functions Default Constructor created
+Testing with mVar1=2147483647, mVar2=5
+F:TestClass.cpp L:163 fn:test_invalid_getSum : Expected: catch 'overflow_error' [mVar1=2147483647, mVar2=5]. Actual: Stack overflow! .....PASS
+Testing with mVar1=-2147483648, mVar2=-5
+F:TestClass.cpp L:179 fn:test_invalid_getSum : Expected: catch 'overflow_error' [mVar1=-2147483648, mVar2=-5]. Actual: Stack overflow! .....PASS
+End...
+
+Testing Functions::getAverage()
+
+Testing GOOD Weather...
+Start...
+
+Functions Default Constructor created
+Testing with mVar1=8, mVar2=9
+Testing with mVar1=8, mVar2=-9
+Testing with mVar1=-8, mVar2=-9
+Testing with mVar1=-8, mVar2=9
+Testing with mVar1=9, mVar2=9
+End...
+
+Testing BAD Weather...
+Start...
+
+Functions Default Constructor created
+Testing with mVar1=2147483647, mVar2=5
+F:TestClass.cpp L:284 fn:test_invalid_getAverage : Expected: catch 'overflow_error' [mVar1=2147483647, mVar2=5]. Actual: Stack overflow! .....PASS
+Testing with mVar1=-2147483648, mVar2=-5
+F:TestClass.cpp L:300 fn:test_invalid_getAverage : Expected: catch 'overflow_error' [mVar1=-2147483648, mVar2=-5]. Actual: Stack overflow! .....PASS
+End...
+
+Testing Functions::isAverageWithinDesiredMaxValue()
+
+Functions Default Constructor created
+Testing with mVar1=8, mVar2=9, mMaxSquareRootValue=10
+
+Testing Functions::getDifference()
+
+Testing GOOD Weather...
+Start...
+
+Functions Default Constructor created
+Testing with mVar1=8, mVar2=9
+Testing with mVar1=8, mVar2=-9
+Testing with mVar1=-8, mVar2=-9
+Testing with mVar1=-8, mVar2=9
+Testing with mVar1=9, mVar2=9
+End...
+
+Testing BAD Weather...
+Start...
+
+Functions Default Constructor created
+Testing with mVar1=-2147483648, mVar2=5
+F:TestClass.cpp L:427 fn:test_invalid_getDifference : Expected: catch 'overflow_error' [mVar1=-2147483648, mVar2=5]. Actual: Stack overflow! .....PASS
+Testing with mVar1=2147483647, mVar2=-5
+F:TestClass.cpp L:443 fn:test_invalid_getDifference : Expected: catch 'overflow_error' [mVar1=2147483647, mVar2=-5]. Actual: Stack overflow! .....PASS
+End...
+
+Testing Functions::getProduct()
+
+Testing GOOD Weather...
+Start...
+
+Functions Default Constructor created
+Testing with mVar1=8, mVar2=9
+Testing with mVar1=8, mVar2=-9
+Testing with mVar1=-8, mVar2=-9
+Testing with mVar1=-8, mVar2=9
+Testing with mVar1=9, mVar2=9
+End...
+
+Testing BAD Weather...
+Start...
+
+Functions Default Constructor created
+Testing with mVar1=-2147483648, mVar2=2147483647
+F:TestClass.cpp L:548 fn:test_invalid_getProduct : Expected: catch 'overflow_error' [mVar1=-2147483648, mVar2=2147483647]. Actual: Stack overflow! .....PASS
+Testing with mVar1=2147483647, mVar2=-5
+F:TestClass.cpp L:564 fn:test_invalid_getProduct : Expected: catch 'overflow_error' [mVar1=2147483647, mVar2=-5]. Actual: Stack overflow! .....PASS
+End...
+
+Testing Functions::getSquareRootOfProduct()
+
+Testing GOOD Weather...
+Start...
+
+Testing Functions::getSquareRootOfProduct()
+
+Functions Default Constructor created
+Testing with mVar1=8, mVar2=9
+Testing with mVar1=-8, mVar2=-9
+Testing with mVar1=9, mVar2=9
+End...
+
+Testing BAD Weather...
+Start...
+
+Functions Default Constructor created
+Testing with mVar1=2147483647, mVar2=2147483647
+F:TestClass.cpp L:655 fn:test_invalid_getSquareRootOfProduct : Expected: catch 'overflow_error' [mVar1=2147483647, mVar2=2147483647]. Actual: Stack overflow! .....PASS
+Testing with mVar1=-2147483648, mVar2=2147483647
+F:TestClass.cpp L:671 fn:test_invalid_getSquareRootOfProduct : Expected: catch 'overflow_error' [mVar1=-2147483648, mVar2=2147483647]. Actual: Stack overflow! .....PASS
+Testing with mVar1=5, mVar2=-5
+F:TestClass.cpp L:687 fn:test_invalid_getSquareRootOfProduct: Error: cannot take square root of negative value. [mVar1=5, mVar2=-5, product=-25]. Actual: Negative product! .....PASS
+End...
+
+Testing Functions::isSquareRootOfProductWithinDesiredMaxValue()
+
+Testing GOOD Weather...
+Start...
+
+Functions Default Constructor created
+Testing with mVar1=6, mVar2=6, mMaxSquareRootValue=7
+Testing with mVar1=7, mVar2=7, mMaxSquareRootValue=7
+Testing with mVar1=-6, mVar2=-6, mMaxSquareRootValue=7
+Testing with mVar1=-7, mVar2=-7, mMaxSquareRootValue=7
+End...
+
+Testing BAD Weather...
+Start...
+
+Functions Default Constructor created
+Testing with mVar1=8, mVar2=9, mMaxSquareRootValue=7
+IS_TRUE_ERROR: test_invalid_isSquareRootOfProductWithinDesiredMaxValue failed on line 782
+Testing with mVar1=-8, mVar2=-9, mMaxSquareRootValue=7
+IS_TRUE_ERROR: test_invalid_isSquareRootOfProductWithinDesiredMaxValue failed on line 790
+Testing with mVar1=9, mVar2=9, mMaxSquareRootValue=7
+IS_TRUE_ERROR: test_invalid_isSquareRootOfProductWithinDesiredMaxValue failed on line 798
+End...
+
+Testing Functions::getDividedValue()
+
+Testing GOOD Weather...
+Start...
+
+Testing Functions::getDividedValue()
+
+Functions Default Constructor created
+Testing with mVar1=8, mVar2=9
+Testing with mVar1=8, mVar2=-9
+Testing with mVar1=-8, mVar2=-9
+Testing with mVar1=-8, mVar2=9
+Testing with mVar1=9, mVar2=9
+Testing with mVar1=0, mVar2=9
+End...
+
+Testing BAD Weather...
+Start...
+
+Functions Default Constructor created
+Testing with mVar1=-2147483648, mVar2=-1
+F:TestClass.cpp L:912 fn:test_invalid_getDividedValue : Expected: catch 'overflow_error' [mVar1=-2147483648, mVar2=-1]. Actual: Stack overflow! .....PASS
+Testing with mVar1=5, mVar2=0
+F:TestClass.cpp L:927 fn:test_invalid_getDividedValue : Expected, as second argument is zero. [mVar1=5, mVar2=0]. .....PASS
+End...
+
+Testing Functions::calculateQuotientAndRemainder()
+
+Testing GOOD Weather...
+Start...
+
+Functions Default Constructor created
+Testing with mVar1=0, mVar2=9
+Testing with mVar1=8, mVar2=9
+Testing with mVar1=8, mVar2=-9
+Testing with mVar1=-8, mVar2=-9
+Testing with mVar1=-8, mVar2=9
+Testing with mVar1=9, mVar2=9
+End...
+
+Testing BAD Weather...
+Start...
+
+Functions Default Constructor created
+Testing with mVar1=8, mVar2=0
+F:TestClass.cpp L:1046 fn:test_invalid_calculateQuotientAndRemainder : Expected: catch 'invalid_argument' [mVar1=8, mVar2=0]. Actual: Second argument is zero. .....PASS
+Testing with mVar1=-2147483648, mVar2=-1
+F:TestClass.cpp L:1063 fn:test_invalid_calculateQuotientAndRemainder : Expected: catch 'overflow_error' [mVar1=-2147483648, mVar2=-1]. Actual: Stack overflow! .....PASS
+End...

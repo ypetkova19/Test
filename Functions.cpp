@@ -1,3 +1,13 @@
+/**
+ * @file Functions.cpp
+ * @author Yolina Petkova (yolina.petkova@strypes.eu)
+ * @brief This file contains the implementation of mathematical function operations
+ * @version 0.1
+ * @date 2023-04-11
+ *
+ * @copyright Copyright (c) 2023
+ *
+ */
 #include <iostream>
 #include <cmath>
 #include <stdexcept>
@@ -7,16 +17,26 @@
 #ifndef FUNCTIONS_HPP_INCLUDED
 #define FUNCTIONS_HPP_INCLUDED
 
+///@brief File name macro
 #define FILE (__FILE__)
+///@brief Line number macro
 #define LINE (__LINE__)
+///@brief Function name macro
+#define FUNC (__func__)
 
-void print_log(std::string filename,
-               int         line,
-               std::string message)
+
+void print_log(const std::string& filename,
+               int                line,
+               const std::string& function,
+               const std::string& message)
 {
-    std::cout << "F:" << filename << " L:" << line << ": " << message << std::endl;
+    std::cout << "F:" << filename << " L:" << line << " fn:" << function << " : " << message << std::endl;
 }
 
+/**
+ * @brief Construct a new Functions:: Functions object
+ * @par Initialize member variables
+ *********************************************************/
 Functions::Functions()
 {
     mVar1 = 0; /* unused */
@@ -26,46 +46,94 @@ Functions::Functions()
     std::cout << std::endl << "Functions Default Constructor created" << std::endl;
 }
 
-Functions::Functions(int a, int b, int c, unsigned int d): mVar1(a), mVar2(b), mMax_average_value(c), mMax_square_root_value(d)
+/**
+ * @brief Construct a new Functions:: Functions object
+ *
+ * @param var1 First value in any mathematical operation
+ * @param var2 Second value in any mathematical operation
+ * @param max_average_value Max desired average value of above vars
+ * @param max_sqrt_value Max desired square root value of the product of above vars
+ **********************************************************/
+Functions::Functions(int var1, int var2, int max_average_value, unsigned int max_sqrt_value): mVar1(var1), mVar2(var2), mMax_average_value(max_average_value), mMax_square_root_value(max_sqrt_value)
 {
-    std::cout << std::endl << "Functions Constructor created. mVar1=" << mVar1 << ", mVar2="<< mVar2 << std::endl;
+    std::cout << "Functions Constructor created. mVar1=" << mVar1 << ", mVar2="<< mVar2 << ", mMax_average_value="<< mMax_average_value << ", mMax_square_root_value="<< mMax_square_root_value << std::endl << std::endl;
 }
 
+/**
+ * @brief Sets param value
+ *
+ * @param value of mVar1
+ **********************************************************/
 void Functions::set_mVar1(int value)
 {
     mVar1 = value;
 }
 
+/**
+ * @brief Sets param value
+ *
+ * @param value of mVar2
+ **********************************************************/
 void Functions::set_mVar2(int value)
 {
     mVar2 = value;
 }
 
+/**
+ * @brief Sets param value
+ *
+ * @param value of mMax_average_value
+ **********************************************************/
 void Functions::set_mMax_average_value(int value)
 {
     mMax_average_value = value;
 }
 
+/**
+ * @brief Sets param value
+ *
+ * @param value of mMax_square_root_value
+ **********************************************************/
 void Functions::set_mMax_square_root_value(unsigned int value)
 {
     mMax_square_root_value = value;
 }
 
+/**
+ * @brief Get param value
+ *
+ * @return int value of mVar1
+ **********************************************************/
 int Functions::get_mVar1()
 {
     return mVar1;
 }
 
+/**
+ * @brief Get param value
+ *
+ * @return int value of mVar2
+ **********************************************************/
 int Functions::get_mVar2()
 {
     return mVar2;
 }
 
+/**
+ * @brief Get param value
+ *
+ * @return int value of mMax_average_value
+ **********************************************************/
 int Functions::get_mMax_average_value()
 {
     return mMax_average_value;
 }
 
+/**
+ * @brief Get param value
+ *
+ * @return int value of mMax_square_root_value
+ **********************************************************/
 int Functions::get_mMax_square_root_value()
 {
     return mMax_square_root_value;
@@ -73,158 +141,166 @@ int Functions::get_mMax_square_root_value()
 
 /* Function methods */
 
-int Functions::getSum(int a, int b)
+/**
+ * @brief Get sum of input values
+ *
+ * @param var1 First value
+ * @param var2 Second value
+ * @return int Sum value of provided inputs
+ **********************************************************/
+int Functions::getSum(int var1, int var2)
 {
-    return (a + b);
+    int sum = var1 + var2;
+
+    if (((var1 > 0) && (var2 > 0) && (sum < 0)) ||
+        ((var1 < 0) && (var2 < 0) && (sum > 0)))
+    {
+        throw std::overflow_error("Stack overflow!");
+    }
+
+    return sum;
 }
 
-int Functions::getAverage(int a, int b)
+/**
+ * @brief Get average of input values
+ *
+ * @param var1 First value
+ * @param var2 Second value
+ * @return int Average valueof provided inputs
+ **********************************************************/
+int Functions::getAverage(int var1, int var2)
 {
-    return ((a + b)/2);
+    int average = ((var1 + var2)/2);
+
+    if (((var1 > 0) && (var2 > 0) && (average < 0)) ||
+        ((var1 < 0) && (var2 < 0) && (average > 0)))
+    {
+        throw std::overflow_error("Stack overflow!");
+    }
+
+    return average;
 }
 
-bool Functions::isAverageWithinDesiredMaxValue(int a, int b)
+/**
+ * @brief Get average of input values
+ *
+ * @param var1 First value
+ * @param var2 Second value
+ * @return int Average value of provided inputs
+ **********************************************************/
+bool Functions::isAverageWithinDesiredMaxValue(int var1, int var2)
 {
-    if (Functions::getAverage(a, b) > Functions::get_mMax_average_value())
+    if (Functions::getAverage(var1, var2) > Functions::get_mMax_average_value())
     {
         return false;
     }
     return true;
 }
 
-int Functions::getDifference(int a, int b)
+/**
+ * @brief Get difference of input values
+ *
+ * @param var1 First value
+ * @param var2 Second value
+ * @return int difference value of provided inputs
+ **********************************************************/
+int Functions::getDifference(int var1, int var2)
 {
-    return (a - b);
+    int diff = var1 - var2;
+
+    if (((var1 > 0) && (var2 < 0) && (diff < 0)) ||
+        ((var1 < 0) && (var2 > 0) && (diff > 0)))
+    {
+        throw std::overflow_error("Stack overflow!");
+    }
+
+    return diff;
 }
 
-int Functions::getProduct(int a, int b)
+
+int Functions::getProduct(int var1, int var2)
 {
-    return (a * b);
+    int product = var1 * var2;
+
+    if (var1 != 0 && (var2 != (product / var1)))
+    {
+        throw std::overflow_error("Stack overflow!"); //add exception documentation to README.md
+        //1.auto-generate with doxygen
+        //2.or manual documentation
+        //static code analysis tool for C++ code - command line tool
+    }
+
+    return product;
 }
 
-double Functions::getSquareRootOfProduct(int a, int b)
+double Functions::getSquareRootOfProduct(int var1, int var2)
 {
-    // missing exception for negative values
-    int product = Functions::getProduct(a, b);
-    try
+    int product = Functions::getProduct(var1, var2);
+
+    if ( product < 0 )
     {
-        if ( product < 0 )
-        {
-            throw std::invalid_argument("getSquareRootOfProduct received negative argument");
-        }
+        throw std::invalid_argument("Negative product!");
+        //gdb print stack
     }
-    catch (const std::invalid_argument& e)
-    {
-        // print_log(FILE, LINE, "Error: cannot take square root of negative value.");
-        std::cout << "ERROR: F:" << FILE << " L:" << LINE << ": " << "Error: cannot take square root of negative value. [mVar1=" << a << ", mVar2=" << b << ", product=" << product << "]" << std::endl;
-        return -1;
-    }
+
     return sqrt(product);
 }
 
-bool Functions::isSquareRootOfProductWithinDesiredMaxValue(int a, int b)
+bool Functions::isSquareRootOfProductWithinDesiredMaxValue(int var1, int var2)
 {
-    if (Functions::getSquareRootOfProduct(a, b) > Functions::get_mMax_square_root_value())
+    double square_root = Functions::getSquareRootOfProduct(var1, var2);
+
+    if (square_root > Functions::get_mMax_square_root_value())
     {
         return false;
     }
     return true;
 }
 
-#if 0
-/* pass by reference */
-//tuples in c++, 2 in 1
-//return tuple
-
-typedef struct
+int Functions::getQuotient(const int &var1, const int &var2)
 {
-    int var;
-} yolina_t;
-
-C
-yolina_t *var = calloc(1, sizeof(*var));
-//equivalent to:
-int* ptr = new int;
-
-free(var)
-
-C++
-yolina_t var = new() //
-delete(var) //from heap
-
-#define DDXA_CREATE(x)
-{
-    x = calloc(1, sizeof(*x));
-}
-#define DDXA_DELETE(x)
-{
-    free(x);
-}
-
-
-
-int array[3];
-array[0] = 0x100
-array[1] = 0x104
-array[2] = 0x108
-
-get(int array[])
-{
-
-}
-#endif
-
-//cost reference
-int Functions::getQuotient(int &a, int &b)
-{
-    if (b == 0)
+    if (var2 == 0)
     {
         throw std::invalid_argument("Second argument is zero.");
-        return false;
     }
-    return (a / b);
-}
 
-int Functions::getRemainder(int &a, int &b)
-{
-    return (a % b);
-}
-
-#if 0
-bool Functions::calculateQuotientAndRemainder(int a, int b, int &quotient, int &remainder)
-{
-    quotient = 0;
-    remainder = 0;
-
-    if (b == 0)
+    /* catch 2's complement overflow */
+    if ((var1 == INT_MIN) && (var2 == -1))
     {
-        throw std::invalid_argument("Second argument is zero.");
-        return false;
+        throw std::overflow_error("Stack overflow!");
     }
 
-    quotient = a / b;
-    remainder = a % b;
-    return true;
+    return (var1 / var2);
 }
-#endif
 
-double Functions::getDividedValue(int a, int b)
+int Functions::getRemainder(const int &var1, const int &var2)
+{
+    return (var1 % var2);
+}
+
+double Functions::getDividedValue(int var1, int var2)
 {
     try
     {
-        if (b == 0)
+        if (var2 == 0)
         {
             throw std::invalid_argument("Second argument is zero.");
         }
     }
     catch (const std::invalid_argument& e)
     {
-        // print_log(FILE, LINE, "Error: cannot divide by zero.");
-        std::cout << "ERROR: F:" << FILE << " L:" << LINE << ": " << "Error: cannot divide by zero. [mVar1=" << a << "mVar2=" << b << "]" << std::endl;
         return 0.0;
     }
 
-    return (a  * 1.0 / b);
+    double divided_value = var1 * 1.0 / var2;
+
+    /* catch 2's complement overflow */
+    if ((var1 == INT_MIN) && (var2 == -1))
+    {
+        throw std::overflow_error("Stack overflow!");
+    }
+
+    return divided_value;
 }
 
 #endif
