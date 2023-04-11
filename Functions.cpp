@@ -11,9 +11,9 @@
 #define LINE (__LINE__)
 #define FUNC (__func__)
 
-void print_log(std::string filename,
+void print_log(const std::string& filename,
                int         line,
-               std::string message)
+               const std::string& message)
 {
     std::cout << "F:" << filename << " L:" << line << ": " << message << std::endl;
 }
@@ -122,13 +122,16 @@ int Functions::getDifference(int a, int b)
     return diff;
 }
 
-int Functions::getProduct(int a, int b)
+int Functions::getProduct(int a, int b) //var1, var2
 {
     int product = a * b;
 
     if (a != 0 && (b != (product / a)))
     {
-        throw std::overflow_error("Stack overflow!");
+        throw std::overflow_error("Stack overflow!"); //add exception documentation to README.md
+        //1.auto-generate with doxygen
+        //2.or manual documentation
+        //static code analysis tool for C++ code - command line tool
     }
 
     return product;
@@ -141,6 +144,7 @@ double Functions::getSquareRootOfProduct(int a, int b)
     if ( product < 0 )
     {
         throw std::invalid_argument("Negative product!");
+        //gdb print stack
     }
 
     return sqrt(product);
@@ -157,7 +161,7 @@ bool Functions::isSquareRootOfProductWithinDesiredMaxValue(int a, int b)
     return true;
 }
 
-int Functions::getQuotient(int &a, int &b)
+int Functions::getQuotient(const int &a, const int &b)
 {
     if (b == 0)
     {
@@ -173,7 +177,7 @@ int Functions::getQuotient(int &a, int &b)
     return (a / b);
 }
 
-int Functions::getRemainder(int &a, int &b)
+int Functions::getRemainder(const int &a, const int &b)
 {
     return (a % b);
 }

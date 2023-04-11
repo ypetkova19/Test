@@ -43,8 +43,7 @@ class Functions
         int getProduct(int a, int b);
         double getSquareRootOfProduct(int a, int b);
         bool isSquareRootOfProductWithinDesiredMaxValue(int a, int b);
-        int getQuotient(int &a, int &b);
-        int getRemainder(int &a, int &b);
-        // bool calculateQuotientAndRemainder(int a, int b, int &quotient, int &remainder);
+        int getQuotient(const int &a, const int &b);
+        int getRemainder(const int &a, const int &b);
         double getDividedValue(int a, int b);
 };

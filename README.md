@@ -73,3 +73,10 @@ source ~/.bash_personal
 
 #### Execute:
 compile && run
+
+
+# Functions Class Methods
+
+Function: getProduct(int a, int b)
+Exceptions: overflow_error
+Possible actions: Provided integers are too big and operation results in value overflow.
