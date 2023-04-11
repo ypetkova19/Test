@@ -15,7 +15,7 @@ class TestClass
 
     public:
         TestClass();
-        TestClass(int a, int b, int c, unsigned int d);
+        TestClass(int var1, int var2, int max_average_value, unsigned int max_sqrt_value);;
 
         /* Methods */
 

@@ -5,11 +5,21 @@
  ************************************************/
 #include <string>
 
+/// @brief Log length max
 const int LOG_LENGTH = 300;
 
-void print_log(std::string filename,
-               int         line,
-               std::string message);
+/**
+ * @brief Prints the formatted message log to the console
+ *
+ * @param filename File name string
+ * @param line Line number
+ * @param function Function name string
+ * @param message Formatted string message to be printed
+ */
+void print_log(const std::string& filename,
+               int                line,
+               const std::string& function,
+               const std::string& message);
 
 
 class Functions
@@ -22,7 +32,7 @@ class Functions
 
     public:
         Functions();
-        Functions(int a, int b, int c, unsigned int d);
+        Functions(int var1, int var2, int max_average_value, unsigned int max_sqrt_value);
 
         void set_mVar1(int value);
         void set_mVar2(int value);

@@ -63,7 +63,6 @@ compile ()
 run ()
 {
     echo "Executing...";
-    echo "  ./output.exe";
     ./output.exe
 }
 <=====END=====>

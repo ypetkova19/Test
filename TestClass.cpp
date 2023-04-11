@@ -1,3 +1,13 @@
+/**
+ * @file TestClass.cpp
+ * @author Yolina Petkova (yolina.petkova@strypes.eu)
+ * @brief This file contains all unit test cases.
+ * @version 0.1
+ * @date 2023-04-11
+ *
+ * @copyright Copyright (c) 2023
+ *
+ */
 #include <iostream>
 #include <cmath>
 #include <cassert>
@@ -46,6 +56,10 @@
 #define TEST_CLASS_SQRT_VALID_UT2_POS_POS_VAR_1 (7)
 #define TEST_CLASS_SQRT_VALID_UT2_POS_POS_VAR_2 (7)
 
+/**
+ * @brief Construct a new Test Class:: Test Class object
+ * @par Initialize member variables
+ *********************************************************/
 TestClass::TestClass()
 {
     mVar1 = 0;
@@ -55,22 +69,26 @@ TestClass::TestClass()
     std::cout << std::endl << "TestClass Default Constructor created" << std::endl;
 }
 
-TestClass::TestClass(int a, int b, int c, unsigned int d): mVar1(a), mVar2(b), mMax_average_value(c), mMax_square_root_value(d)
+/**
+ * @brief Construct a new Test Class:: Test Class object
+ *
+ * @param var1 First value in any mathematical operation
+ * @param var2 Second value in any mathematical operation
+ * @param max_average_value Max desired average value of above vars
+ * @param max_sqrt_value Max desired square root value of the product of above vars
+ **********************************************************/
+TestClass::TestClass(int var1, int var2, int max_average_value, unsigned int max_sqrt_value): mVar1(var1), mVar2(var2), mMax_average_value(max_average_value), mMax_square_root_value(max_sqrt_value)
 {
     std::cout << "TestClass Constructor created. mVar1=" << mVar1 << ", mVar2="<< mVar2 << ", mMax_average_value="<< mMax_average_value << ", mMax_square_root_value="<< mMax_square_root_value << std::endl << std::endl;
 }
 
-/*****************************************************************
+/**
+ * @brief Tests the mathematical operation function.
+ * @par Functions tests with any positive or negative integer value, including chars and decimals
+ * Chars are ascii integers and decimals will be truncated
+ * @note Operation may overflow
  *
- * Function: test_getSum
- *
- * Description: Tests mathematical operation.
- *
- * Valid UT inputs: Any positive or negative integer value (includes: chars and decimals)
- *
- * Invalid UT inputs: Overflow values
- *
- *****************************************************************/
+ **********************************************************/
 void TestClass::test_getSum()
 {
     std::cout << std::endl << "Testing Functions::getSum()" << std::endl;
@@ -87,11 +105,10 @@ void TestClass::test_getSum()
 
 } /* test_getSum */
 
-/*****************************************************************
+/**
+ * @brief Tests the good weather mathematical operation function scenarios.
  *
- * Function: test_valid_getSum
- *
- *****************************************************************/
+ **********************************************************/
 void TestClass::test_valid_getSum()
 {
     /* UT: Positive and Positive */
@@ -138,11 +155,10 @@ void TestClass::test_valid_getSum()
 
 } /* test_valid_getSum */
 
-/*****************************************************************
+/**
+ * @brief Tests the bad weather mathematical operation function scenarios.
  *
- * Function: test_invalid_getSum
- *
- *****************************************************************/
+ **********************************************************/
 void TestClass::test_invalid_getSum()
 {
     Functions test1;
@@ -181,17 +197,13 @@ void TestClass::test_invalid_getSum()
 
 } /* test_invalid_getSum */
 
-/*****************************************************************
+/**
+ * @brief Tests the mathematical operation function.
+ * @par Functions tests with any positive or negative integer value, including chars and decimals
+ * Chars are ascii integers and decimals will be truncated
+ * @note Operation may overflow
  *
- * Function: test_getAverage
- *
- * Description: Tests mathematical operation.
- *
- * Valid UT inputs: Any positive or negative integer value (includes: chars and decimals)
- *
- * Invalid UT inputs: Overflow values
- *
- *****************************************************************/
+ **********************************************************/
 void TestClass::test_getAverage()
 {
     std::cout << std::endl << "Testing Functions::getAverage()" << std::endl;
@@ -208,11 +220,10 @@ void TestClass::test_getAverage()
 
 } /* test_getAverage */
 
-/*****************************************************************
+/**
+ * @brief Tests the good weather mathematical operation function scenarios.
  *
- * Function: test_valid_getAverage
- *
- *****************************************************************/
+ **********************************************************/
 void TestClass::test_valid_getAverage()
 {
     /* UT: Positive and Positive */
@@ -259,11 +270,10 @@ void TestClass::test_valid_getAverage()
 
 } /* test_valid_getAverage */
 
-/*****************************************************************
+/**
+ * @brief Tests the bad weather mathematical operation function scenarios.
  *
- * Function: test_invalid_getAverage
- *
- *****************************************************************/
+ **********************************************************/
 void TestClass::test_invalid_getAverage()
 {
     Functions test1;
