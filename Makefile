@@ -1,11 +1,4 @@
 # # the compiler: gcc for C program, define as g++ for C++
-# CC = g++
-
-# # compiler flags:
-# #  -g     - this flag adds debugging information to the executable file
-# #  -Wall  - this flag is used to turn on most compiler warnings
-# CFLAGS  = -g -Wall
-
 CXX ?= g++
 
 # path #
@@ -29,7 +22,7 @@ OBJECTS = $(SOURCES:$(SRC_PATH)/%.$(SRC_EXT)=$(BUILD_PATH)/%.o)
 # Set the dependency files that will be used to add header dependencies
 DEPS = $(OBJECTS:.o=.d)
 
-# flags #
+# compiler flags: #
 # #  -g      - this flag adds debugging information to the executable file
 # #  -Wall   - this flag is used to turn on most compiler warnings
 # #  -Wextra - this flag is used to turn on extra compiler warnings not enabled by -Wall
