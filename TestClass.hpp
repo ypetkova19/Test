@@ -73,8 +73,23 @@ class TestClass
          *
          **************************************************************************/
         void test_invalid_getAverage();
+
+        /**
+         * @brief Tests whether the mathematical operation results within the desired range.
+         * @par Functions tests with any positive or negative integer value, including chars and decimals
+         * Chars are ascii integers and decimals will be truncated
+         * @note Operation may overflow
+         *
+         **************************************************************************/
         void test_isAverageWithinDesiredMaxValue();
 
+        /**
+         * @brief Tests the mathematical operation function.
+         * @par Functions tests with any positive or negative integer value, including chars and decimals
+         * Chars are ascii integers and decimals will be truncated
+         * @note Operation may overflow
+         *
+         **************************************************************************/
         void test_getDifference();
 
         /**
@@ -89,6 +104,13 @@ class TestClass
          **************************************************************************/
         void test_invalid_getDifference();
 
+        /**
+         * @brief Tests the mathematical operation function.
+         * @par Functions tests with any positive or negative integer value, including chars and decimals
+         * Chars are ascii integers and decimals will be truncated
+         * @note Operation may overflow
+         *
+         **************************************************************************/
         void test_getProduct();
 
         /**
@@ -103,6 +125,13 @@ class TestClass
          **************************************************************************/
         void test_invalid_getProduct();
 
+        /**
+         * @brief Tests the mathematical operation function.
+         * @par Functions tests with any positive or negative integer value, including chars and decimals
+         * Chars are ascii integers and decimals will be truncated
+         * @note Operation may overflow OR may fail when product results in negative value
+         *
+         **************************************************************************/
         void test_getSquareRootOfProduct();
 
         /**
@@ -116,6 +145,14 @@ class TestClass
          *
          **************************************************************************/
         void test_invalid_getSquareRootOfProduct();
+
+        /**
+         * @brief Tests whether the mathematical operation results within the desired range.
+         * @par Functions tests with any positive or negative integer value, including chars and decimals
+         * Chars are ascii integers and decimals will be truncated
+         * @note Operation may overflow OR may fail when product results in negative value
+         *
+         **************************************************************************/
         void test_isSquareRootOfProductWithinDesiredMaxValue();
 
         /**
@@ -130,6 +167,13 @@ class TestClass
          **************************************************************************/
         void test_invalid_isSquareRootOfProductWithinDesiredMaxValue();
 
+        /**
+         * @brief Tests the mathematical operation function.
+         * @par Functions tests with any positive or negative integer value, including chars and decimals
+         * Chars are ascii integers and decimals will be truncated
+         * @note Operation may overflow
+         *
+         **************************************************************************/
         void test_getDividedValue();
 
         /**
@@ -144,6 +188,13 @@ class TestClass
          **************************************************************************/
         void test_invalid_getDividedValue();
 
+        /**
+         * @brief Tests the mathematical operation function.
+         * @par Functions tests with any positive or negative integer value, including chars and decimals
+         * Chars are ascii integers and decimals will be truncated
+         * @note Operation may overflow OR operation will handleexception when dividing by zero
+         *
+         **************************************************************************/
         void test_calculateQuotientAndRemainder();
 
         /**
