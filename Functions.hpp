@@ -15,7 +15,7 @@ const int LOG_LENGTH = 300;
  * @param line Line number
  * @param function Function name string
  * @param message Formatted string message to be printed
- */
+ *************************************************************************/
 void print_log(const std::string& filename,
                int                line,
                const std::string& function,

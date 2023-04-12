@@ -36,7 +36,7 @@ void print_log(const std::string& filename,
 /**
  * @brief Construct a new Functions:: Functions object
  * @par Initialize member variables
- *********************************************************/
+ *************************************************************************/
 Functions::Functions()
 {
     mVar1 = 0; /* unused */
@@ -53,7 +53,7 @@ Functions::Functions()
  * @param var2 Second value in any mathematical operation
  * @param max_average_value Max desired average value of above vars
  * @param max_sqrt_value Max desired square root value of the product of above vars
- **********************************************************/
+ **************************************************************************/
 Functions::Functions(int var1, int var2, int max_average_value, unsigned int max_sqrt_value): mVar1(var1), mVar2(var2), mMax_average_value(max_average_value), mMax_square_root_value(max_sqrt_value)
 {
     std::cout << "Functions Constructor created. mVar1=" << mVar1 << ", mVar2="<< mVar2 << ", mMax_average_value="<< mMax_average_value << ", mMax_square_root_value="<< mMax_square_root_value << std::endl << std::endl;
@@ -63,7 +63,7 @@ Functions::Functions(int var1, int var2, int max_average_value, unsigned int max
  * @brief Sets param value
  *
  * @param value of mVar1
- **********************************************************/
+ **************************************************************************/
 void Functions::set_mVar1(int value)
 {
     mVar1 = value;
@@ -73,7 +73,7 @@ void Functions::set_mVar1(int value)
  * @brief Sets param value
  *
  * @param value of mVar2
- **********************************************************/
+ **************************************************************************/
 void Functions::set_mVar2(int value)
 {
     mVar2 = value;
@@ -83,7 +83,7 @@ void Functions::set_mVar2(int value)
  * @brief Sets param value
  *
  * @param value of mMax_average_value
- **********************************************************/
+ **************************************************************************/
 void Functions::set_mMax_average_value(int value)
 {
     mMax_average_value = value;
@@ -93,7 +93,7 @@ void Functions::set_mMax_average_value(int value)
  * @brief Sets param value
  *
  * @param value of mMax_square_root_value
- **********************************************************/
+ **************************************************************************/
 void Functions::set_mMax_square_root_value(unsigned int value)
 {
     mMax_square_root_value = value;
@@ -103,7 +103,7 @@ void Functions::set_mMax_square_root_value(unsigned int value)
  * @brief Get param value
  *
  * @return int value of mVar1
- **********************************************************/
+ **************************************************************************/
 int Functions::get_mVar1()
 {
     return mVar1;
@@ -113,7 +113,7 @@ int Functions::get_mVar1()
  * @brief Get param value
  *
  * @return int value of mVar2
- **********************************************************/
+ **************************************************************************/
 int Functions::get_mVar2()
 {
     return mVar2;
@@ -123,7 +123,7 @@ int Functions::get_mVar2()
  * @brief Get param value
  *
  * @return int value of mMax_average_value
- **********************************************************/
+ **************************************************************************/
 int Functions::get_mMax_average_value()
 {
     return mMax_average_value;
@@ -133,7 +133,7 @@ int Functions::get_mMax_average_value()
  * @brief Get param value
  *
  * @return int value of mMax_square_root_value
- **********************************************************/
+ **************************************************************************/
 int Functions::get_mMax_square_root_value()
 {
     return mMax_square_root_value;
@@ -147,7 +147,7 @@ int Functions::get_mMax_square_root_value()
  * @param var1 First value
  * @param var2 Second value
  * @return int Sum value of provided inputs
- **********************************************************/
+ **************************************************************************/
 int Functions::getSum(int var1, int var2)
 {
     int sum = var1 + var2;
@@ -167,7 +167,7 @@ int Functions::getSum(int var1, int var2)
  * @param var1 First value
  * @param var2 Second value
  * @return int Average valueof provided inputs
- **********************************************************/
+ **************************************************************************/
 int Functions::getAverage(int var1, int var2)
 {
     int average = ((var1 + var2)/2);
@@ -187,7 +187,7 @@ int Functions::getAverage(int var1, int var2)
  * @param var1 First value
  * @param var2 Second value
  * @return int Average value of provided inputs
- **********************************************************/
+ **************************************************************************/
 bool Functions::isAverageWithinDesiredMaxValue(int var1, int var2)
 {
     if (Functions::getAverage(var1, var2) > Functions::get_mMax_average_value())
@@ -203,7 +203,7 @@ bool Functions::isAverageWithinDesiredMaxValue(int var1, int var2)
  * @param var1 First value
  * @param var2 Second value
  * @return int difference value of provided inputs
- **********************************************************/
+ **************************************************************************/
 int Functions::getDifference(int var1, int var2)
 {
     int diff = var1 - var2;
@@ -217,7 +217,13 @@ int Functions::getDifference(int var1, int var2)
     return diff;
 }
 
-
+/**
+ * @brief Get product of input variables
+ *
+ * @param var1 First value
+ * @param var2 Second value
+ * @return int
+ *************************************************************************/
 int Functions::getProduct(int var1, int var2)
 {
     int product = var1 * var2;

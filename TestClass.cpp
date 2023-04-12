@@ -59,7 +59,7 @@
 /**
  * @brief Construct a new Test Class:: Test Class object
  * @par Initialize member variables
- *********************************************************/
+ *************************************************************************/
 TestClass::TestClass()
 {
     mVar1 = 0;
@@ -76,7 +76,7 @@ TestClass::TestClass()
  * @param var2 Second value in any mathematical operation
  * @param max_average_value Max desired average value of above vars
  * @param max_sqrt_value Max desired square root value of the product of above vars
- **********************************************************/
+ **************************************************************************/
 TestClass::TestClass(int var1, int var2, int max_average_value, unsigned int max_sqrt_value): mVar1(var1), mVar2(var2), mMax_average_value(max_average_value), mMax_square_root_value(max_sqrt_value)
 {
     std::cout << "TestClass Constructor created. mVar1=" << mVar1 << ", mVar2="<< mVar2 << ", mMax_average_value="<< mMax_average_value << ", mMax_square_root_value="<< mMax_square_root_value << std::endl << std::endl;
@@ -88,7 +88,7 @@ TestClass::TestClass(int var1, int var2, int max_average_value, unsigned int max
  * Chars are ascii integers and decimals will be truncated
  * @note Operation may overflow
  *
- **********************************************************/
+ **************************************************************************/
 void TestClass::test_getSum()
 {
     std::cout << std::endl << "Testing Functions::getSum()" << std::endl;
@@ -108,7 +108,7 @@ void TestClass::test_getSum()
 /**
  * @brief Tests the good weather mathematical operation function scenarios.
  *
- **********************************************************/
+ **************************************************************************/
 void TestClass::test_valid_getSum()
 {
     /* UT: Positive and Positive */
@@ -158,7 +158,7 @@ void TestClass::test_valid_getSum()
 /**
  * @brief Tests the bad weather mathematical operation function scenarios.
  *
- **********************************************************/
+ **************************************************************************/
 void TestClass::test_invalid_getSum()
 {
     Functions test1;
@@ -203,7 +203,7 @@ void TestClass::test_invalid_getSum()
  * Chars are ascii integers and decimals will be truncated
  * @note Operation may overflow
  *
- **********************************************************/
+ **************************************************************************/
 void TestClass::test_getAverage()
 {
     std::cout << std::endl << "Testing Functions::getAverage()" << std::endl;
@@ -223,7 +223,7 @@ void TestClass::test_getAverage()
 /**
  * @brief Tests the good weather mathematical operation function scenarios.
  *
- **********************************************************/
+ **************************************************************************/
 void TestClass::test_valid_getAverage()
 {
     /* UT: Positive and Positive */
@@ -273,7 +273,7 @@ void TestClass::test_valid_getAverage()
 /**
  * @brief Tests the bad weather mathematical operation function scenarios.
  *
- **********************************************************/
+ **************************************************************************/
 void TestClass::test_invalid_getAverage()
 {
     Functions test1;
@@ -344,7 +344,7 @@ void TestClass::test_isAverageWithinDesiredMaxValue()
  *
  * Invalid UT inputs: Overflow values
  *
- *****************************************************************/
+ *********************************************************************************/
 void TestClass::test_getDifference()
 {
     std::cout << std::endl << "Testing Functions::getDifference()" << std::endl;
@@ -365,7 +365,7 @@ void TestClass::test_getDifference()
  *
  * Function: test_valid_getDifference
  *
- *****************************************************************/
+ *********************************************************************************/
 void TestClass::test_valid_getDifference()
 {
     /* UT: Positive and Positive */
@@ -416,7 +416,7 @@ void TestClass::test_valid_getDifference()
  *
  * Function: test_invalid_getDifference
  *
- *****************************************************************/
+ *********************************************************************************/
 void TestClass::test_invalid_getDifference()
 {
     Functions test1;
@@ -465,7 +465,7 @@ void TestClass::test_invalid_getDifference()
  *
  * Invalid UT inputs: Overflow values
  *
- *****************************************************************/
+ *********************************************************************************/
 void TestClass::test_getProduct()
 {
     std::cout << std::endl << "Testing Functions::getProduct()" << std::endl;
@@ -486,7 +486,7 @@ void TestClass::test_getProduct()
  *
  * Function: test_valid_getProduct
  *
- *****************************************************************/
+ *********************************************************************************/
 void TestClass::test_valid_getProduct()
 {
     /* UT: Positive and Positive */
@@ -537,7 +537,7 @@ void TestClass::test_valid_getProduct()
  *
  * Function: test_invalid_getProduct
  *
- *****************************************************************/
+ *********************************************************************************/
 void TestClass::test_invalid_getProduct()
 {
     Functions test1;
@@ -586,7 +586,7 @@ void TestClass::test_invalid_getProduct()
  *
  * Invalid UT inputs: Negative resulting product
  *
- *****************************************************************/
+ *********************************************************************************/
 void TestClass::test_getSquareRootOfProduct()
 {
     std::cout << std::endl << "Testing Functions::getSquareRootOfProduct()" << std::endl;
@@ -607,7 +607,7 @@ void TestClass::test_getSquareRootOfProduct()
  *
  * Function: test_valid_getSquareRootOfProduct
  *
- *****************************************************************/
+ *********************************************************************************/
 void TestClass::test_valid_getSquareRootOfProduct()
 {
     std::cout << std::endl << "Testing Functions::getSquareRootOfProduct()" << std::endl;
@@ -644,7 +644,7 @@ void TestClass::test_valid_getSquareRootOfProduct()
  *
  * Function: test_invalid_getSquareRootOfProduct
  *
- *****************************************************************/
+ *********************************************************************************/
 void TestClass::test_invalid_getSquareRootOfProduct()
 {
     Functions test1;
@@ -709,7 +709,7 @@ void TestClass::test_invalid_getSquareRootOfProduct()
  *
  * Invalid UT inputs: Any positive or negative integer value pairs whose square root is larger than desired max sqrt value.
  *
- *****************************************************************/
+ *********************************************************************************/
 void TestClass::test_isSquareRootOfProductWithinDesiredMaxValue()
 {
     std::cout << std::endl << "Testing Functions::isSquareRootOfProductWithinDesiredMaxValue()" << std::endl;
@@ -730,7 +730,7 @@ void TestClass::test_isSquareRootOfProductWithinDesiredMaxValue()
  *
  * Function: test_valid_isSquareRootOfProductWithinDesiredMaxValue
  *
- *****************************************************************/
+ *********************************************************************************/
 void TestClass::test_valid_isSquareRootOfProductWithinDesiredMaxValue()
 {
     unsigned int d = TEST_CLASS_MAX_SQRT_VALUE;
@@ -776,7 +776,7 @@ void TestClass::test_valid_isSquareRootOfProductWithinDesiredMaxValue()
  *
  * Function: test_invalid_isSquareRootOfProductWithinDesiredMaxValue
  *
- *****************************************************************/
+ *********************************************************************************/
 void TestClass::test_invalid_isSquareRootOfProductWithinDesiredMaxValue()
 {
     unsigned int d = TEST_CLASS_MAX_SQRT_VALUE;
@@ -820,7 +820,7 @@ void TestClass::test_invalid_isSquareRootOfProductWithinDesiredMaxValue()
  *
  * Invalid UT inputs: Overflow values
  *
- *****************************************************************/
+ *********************************************************************************/
 void TestClass::test_getDividedValue()
 {
     std::cout << std::endl << "Testing Functions::getDividedValue()" << std::endl;
@@ -841,7 +841,7 @@ void TestClass::test_getDividedValue()
  *
  * Function: test_valid_getDividedValue
  *
- *****************************************************************/
+ *********************************************************************************/
 void TestClass::test_valid_getDividedValue()
 {
     std::cout << std::endl << "Testing Functions::getDividedValue()" << std::endl;
@@ -902,7 +902,7 @@ void TestClass::test_valid_getDividedValue()
  *
  * Function: test_invalid_getDividedValue
  *
- *****************************************************************/
+ *********************************************************************************/
 void TestClass::test_invalid_getDividedValue()
 {
     Functions test1;
@@ -950,7 +950,7 @@ void TestClass::test_invalid_getDividedValue()
  *
  * Invalid UT inputs: None
  *
- *****************************************************************/
+ *********************************************************************************/
 void TestClass::test_calculateQuotientAndRemainder()
 {
     std::cout << std::endl << "Testing Functions::calculateQuotientAndRemainder()" << std::endl;
@@ -971,7 +971,7 @@ void TestClass::test_calculateQuotientAndRemainder()
  *
  * Function: test_valid_calculateQuotientAndRemainder
  *
- *****************************************************************/
+ *********************************************************************************/
 void TestClass::test_valid_calculateQuotientAndRemainder()
 {
     /* UT: Positive and Positive */
@@ -1036,7 +1036,7 @@ void TestClass::test_valid_calculateQuotientAndRemainder()
  *
  * Function: test_invalid_calculateQuotientAndRemainder
  *
- *****************************************************************/
+ *********************************************************************************/
 void TestClass::test_invalid_calculateQuotientAndRemainder()
 {
     Functions test1;
