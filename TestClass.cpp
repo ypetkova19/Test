@@ -82,6 +82,8 @@ TestClass::TestClass(int var1, int var2, int max_average_value, unsigned int max
     std::cout << "TestClass Constructor created. mVar1=" << mVar1 << ", mVar2="<< mVar2 << ", mMax_average_value="<< mMax_average_value << ", mMax_square_root_value="<< mMax_square_root_value << std::endl << std::endl;
 }
 
+/* Methods */
+
 /**
  * @brief Tests the mathematical operation function.
  * @par Functions tests with any positive or negative integer value, including chars and decimals
@@ -312,7 +314,13 @@ void TestClass::test_invalid_getAverage()
 
 } /* test_invalid_getAverage */
 
-
+/**
+ * @brief Tests whether the mathematical operation result is within the desired range.
+ * @par Functions tests with any positive or negative integer value, including chars and decimals
+ * Chars are ascii integers and decimals will be truncated
+ * @note Operation may overflow
+ *
+ **************************************************************************/
 void TestClass::test_isAverageWithinDesiredMaxValue()
 {
     std::cout << std::endl << "Testing Functions::isAverageWithinDesiredMaxValue()" << std::endl;
@@ -334,17 +342,13 @@ void TestClass::test_isAverageWithinDesiredMaxValue()
 
 } /* test_isAverageWithinDesiredMaxValue */
 
-/*****************************************************************
+/**
+ * @brief Tests the mathematical operation function.
+ * @par Functions tests with any positive or negative integer value, including chars and decimals
+ * Chars are ascii integers and decimals will be truncated
+ * @note Operation may overflow
  *
- * Function: test_getDifference
- *
- * Description: Tests mathematical operation.
- *
- * Valid UT inputs: Any positive or negative integer value (includes: chars and decimals)
- *
- * Invalid UT inputs: Overflow values
- *
- *********************************************************************************/
+ **************************************************************************/
 void TestClass::test_getDifference()
 {
     std::cout << std::endl << "Testing Functions::getDifference()" << std::endl;
@@ -361,11 +365,10 @@ void TestClass::test_getDifference()
 
 } /* test_getDifference */
 
-/*****************************************************************
+/**
+ * @brief Tests the good weather mathematical operation function scenarios.
  *
- * Function: test_valid_getDifference
- *
- *********************************************************************************/
+ **************************************************************************/
 void TestClass::test_valid_getDifference()
 {
     /* UT: Positive and Positive */
@@ -412,11 +415,10 @@ void TestClass::test_valid_getDifference()
 
 } /* test_valid_getDifference */
 
-/*****************************************************************
+/**
+ * @brief Tests the bad weather mathematical operation function scenarios.
  *
- * Function: test_invalid_getDifference
- *
- *********************************************************************************/
+ **************************************************************************/
 void TestClass::test_invalid_getDifference()
 {
     Functions test1;
@@ -455,17 +457,13 @@ void TestClass::test_invalid_getDifference()
 
 } /* test_invalid_getDifference */
 
-/*****************************************************************
+/**
+ * @brief Tests the mathematical operation function.
+ * @par Functions tests with any positive or negative integer value, including chars and decimals
+ * Chars are ascii integers and decimals will be truncated
+ * @note Operation may overflow
  *
- * Function: test_getProduct
- *
- * Description: Tests mathematical operation.
- *
- * Valid UT inputs: Any positive or negative integer value (includes: chars and decimals)
- *
- * Invalid UT inputs: Overflow values
- *
- *********************************************************************************/
+ **************************************************************************/
 void TestClass::test_getProduct()
 {
     std::cout << std::endl << "Testing Functions::getProduct()" << std::endl;
@@ -482,11 +480,10 @@ void TestClass::test_getProduct()
 
 } /* test_getProduct */
 
-/*****************************************************************
+/**
+ * @brief Tests the good weather mathematical operation function scenarios.
  *
- * Function: test_valid_getProduct
- *
- *********************************************************************************/
+ **************************************************************************/
 void TestClass::test_valid_getProduct()
 {
     /* UT: Positive and Positive */
@@ -533,11 +530,10 @@ void TestClass::test_valid_getProduct()
 
 } /* test_valid_getProduct */
 
-/*****************************************************************
+/**
+ * @brief Tests the bad weather mathematical operation function scenarios.
  *
- * Function: test_invalid_getProduct
- *
- *********************************************************************************/
+ **************************************************************************/
 void TestClass::test_invalid_getProduct()
 {
     Functions test1;
@@ -576,17 +572,13 @@ void TestClass::test_invalid_getProduct()
 
 } /* test_invalid_getProduct */
 
-/*****************************************************************
+/**
+ * @brief Tests the mathematical operation function.
+ * @par Functions tests with any positive or negative integer value, including chars and decimals
+ * Chars are ascii integers and decimals will be truncated
+ * @note Operation fails when calculated product is negative
  *
- * Function: test_getSquareRootOfProduct
- *
- * Description: Tests mathematical operation.
- *
- * Valid UT inputs: Any positive or negative integer value (includes: chars and decimals)
- *
- * Invalid UT inputs: Negative resulting product
- *
- *********************************************************************************/
+ **************************************************************************/
 void TestClass::test_getSquareRootOfProduct()
 {
     std::cout << std::endl << "Testing Functions::getSquareRootOfProduct()" << std::endl;
@@ -603,11 +595,10 @@ void TestClass::test_getSquareRootOfProduct()
 
 } /* test_getSquareRootOfProduct */
 
-/*****************************************************************
+/**
+ * @brief Tests the good weather mathematical operation function scenarios.
  *
- * Function: test_valid_getSquareRootOfProduct
- *
- *********************************************************************************/
+ **************************************************************************/
 void TestClass::test_valid_getSquareRootOfProduct()
 {
     std::cout << std::endl << "Testing Functions::getSquareRootOfProduct()" << std::endl;
@@ -640,11 +631,10 @@ void TestClass::test_valid_getSquareRootOfProduct()
 
 } /* test_valid_getSquareRootOfProduct */
 
-/*****************************************************************
+/**
+ * @brief Tests the bad weather mathematical operation function scenarios.
  *
- * Function: test_invalid_getSquareRootOfProduct
- *
- *********************************************************************************/
+ **************************************************************************/
 void TestClass::test_invalid_getSquareRootOfProduct()
 {
     Functions test1;
@@ -699,17 +689,13 @@ void TestClass::test_invalid_getSquareRootOfProduct()
 
 } /* test_invalid_getSquareRootOfProduct */
 
-/*****************************************************************
+/**
+ * @brief Tests whether the mathematical operation is within the desired range.
+ * @par Functions tests with any positive or negative integer value, including chars and decimals
+ * Chars are ascii integers and decimals will be truncated
+ * @note Operation fails when calculated product is negative
  *
- * Function: test_isSquareRootOfProductWithinDesiredMaxValue
- *
- * Description: Tests mathematical operation.
- *
- * Valid UT inputs: Any positive or negative integer value (includes: chars and decimals)
- *
- * Invalid UT inputs: Any positive or negative integer value pairs whose square root is larger than desired max sqrt value.
- *
- *********************************************************************************/
+ **************************************************************************/
 void TestClass::test_isSquareRootOfProductWithinDesiredMaxValue()
 {
     std::cout << std::endl << "Testing Functions::isSquareRootOfProductWithinDesiredMaxValue()" << std::endl;
@@ -726,11 +712,10 @@ void TestClass::test_isSquareRootOfProductWithinDesiredMaxValue()
 
 } /* test_isSquareRootOfProductWithinDesiredMaxValue */
 
-/*****************************************************************
+/**
+ * @brief Tests the good weather mathematical operation function scenarios.
  *
- * Function: test_valid_isSquareRootOfProductWithinDesiredMaxValue
- *
- *********************************************************************************/
+ **************************************************************************/
 void TestClass::test_valid_isSquareRootOfProductWithinDesiredMaxValue()
 {
     unsigned int d = TEST_CLASS_MAX_SQRT_VALUE;
@@ -772,11 +757,10 @@ void TestClass::test_valid_isSquareRootOfProductWithinDesiredMaxValue()
 
 } /* test_valid_isSquareRootOfProductWithinDesiredMaxValue */
 
-/*****************************************************************
+/**
+ * @brief Tests the bad weather mathematical operation function scenarios.
  *
- * Function: test_invalid_isSquareRootOfProductWithinDesiredMaxValue
- *
- *********************************************************************************/
+ **************************************************************************/
 void TestClass::test_invalid_isSquareRootOfProductWithinDesiredMaxValue()
 {
     unsigned int d = TEST_CLASS_MAX_SQRT_VALUE;
@@ -810,17 +794,13 @@ void TestClass::test_invalid_isSquareRootOfProductWithinDesiredMaxValue()
 
 } /* test_invalid_isSquareRootOfProductWithinDesiredMaxValue */
 
-/*****************************************************************
+/**
+ * @brief Tests the mathematical operation function.
+ * @par Functions tests with any positive or negative integer value, including chars and decimals
+ * Chars are ascii integers and decimals will be truncated
+ * @note Operation may overflow
  *
- * Function: test_getDividedValue
- *
- * Description: Tests mathematical operation.
- *
- * Valid UT inputs: Any positive or negative integer value (includes: chars and decimals)
- *
- * Invalid UT inputs: Overflow values
- *
- *********************************************************************************/
+ **************************************************************************/
 void TestClass::test_getDividedValue()
 {
     std::cout << std::endl << "Testing Functions::getDividedValue()" << std::endl;
@@ -837,11 +817,10 @@ void TestClass::test_getDividedValue()
 
 } /* test_getDividedValue */
 
-/*****************************************************************
+/**
+ * @brief Tests the good weather mathematical operation function scenarios.
  *
- * Function: test_valid_getDividedValue
- *
- *********************************************************************************/
+ **************************************************************************/
 void TestClass::test_valid_getDividedValue()
 {
     std::cout << std::endl << "Testing Functions::getDividedValue()" << std::endl;
@@ -898,11 +877,10 @@ void TestClass::test_valid_getDividedValue()
 
 } /* test_valid_getDividedValue */
 
-/*****************************************************************
+/**
+ * @brief Tests the bad weather mathematical operation function scenarios.
  *
- * Function: test_invalid_getDividedValue
- *
- *********************************************************************************/
+ **************************************************************************/
 void TestClass::test_invalid_getDividedValue()
 {
     Functions test1;
@@ -940,17 +918,14 @@ void TestClass::test_invalid_getDividedValue()
 
 } /* test_invalid_getDividedValue */
 
-/*****************************************************************
+/**
+ * @brief Tests the mathematical operation function.
+ * @par Functions tests with any positive or negative integer value, including chars and decimals
+ * Chars are ascii integers and decimals will be truncated
+ * @note Operation may overflow
+ * @note Operation will catch a divide-by-zero scenario
  *
- * Function: test_calculateQuotientAndRemainder
- *
- * Description: Tests mathematical operation.
- *
- * Valid UT inputs: Any positive or negative integer value (includes: chars and decimals)
- *
- * Invalid UT inputs: None
- *
- *********************************************************************************/
+ **************************************************************************/
 void TestClass::test_calculateQuotientAndRemainder()
 {
     std::cout << std::endl << "Testing Functions::calculateQuotientAndRemainder()" << std::endl;
@@ -967,11 +942,10 @@ void TestClass::test_calculateQuotientAndRemainder()
 
 } /* test_calculateQuotientAndRemainder */
 
-/*****************************************************************
+/**
+ * @brief Tests the good weather mathematical operation function scenarios.
  *
- * Function: test_valid_calculateQuotientAndRemainder
- *
- *********************************************************************************/
+ **************************************************************************/
 void TestClass::test_valid_calculateQuotientAndRemainder()
 {
     /* UT: Positive and Positive */
@@ -1032,11 +1006,10 @@ void TestClass::test_valid_calculateQuotientAndRemainder()
 
 } /* test_valid_calculateQuotientAndRemainder */
 
-/*****************************************************************
+/**
+ * @brief Tests the bad weather mathematical operation function scenarios.
  *
- * Function: test_invalid_calculateQuotientAndRemainder
- *
- *********************************************************************************/
+ **************************************************************************/
 void TestClass::test_invalid_calculateQuotientAndRemainder()
 {
     Functions test1;
@@ -1076,7 +1049,11 @@ void TestClass::test_invalid_calculateQuotientAndRemainder()
 
 } /* test_invalid_calculateQuotientAndRemainder */
 
-
+/**
+ * @brief main function for test execution
+ *
+ * @return int
+ *************************************************************************/
 int main()
 {
     print_log(FILE, LINE, "Test print");

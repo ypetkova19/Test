@@ -14,40 +14,147 @@ class TestClass
         unsigned int mMax_square_root_value;
 
     public:
+        /**
+         * @brief Construct a new Test Class:: Test Class object
+         * @par Initialize member variables
+         *************************************************************************/
         TestClass();
+
+        /**
+         * @brief Construct a new Test Class:: Test Class object
+         *
+         * @param var1 First value in any mathematical operation
+         * @param var2 Second value in any mathematical operation
+         * @param max_average_value Max desired average value of above vars
+         * @param max_sqrt_value Max desired square root value of the product of above vars
+         **************************************************************************/
         TestClass(int var1, int var2, int max_average_value, unsigned int max_sqrt_value);;
 
         /* Methods */
 
+        /**
+         * @brief Tests the mathematical operation function.
+         * @par Functions tests with any positive or negative integer value, including chars and decimals
+         * Chars are ascii integers and decimals will be truncated
+         * @note Operation may overflow
+         *
+         **************************************************************************/
         void test_getSum();
+
+        /**
+         * @brief Tests the good weather mathematical operation function scenarios.
+         *
+         **************************************************************************/
         void test_valid_getSum();
+
+        /**
+         * @brief Tests the bad weather mathematical operation function scenarios.
+         *
+         **************************************************************************/
         void test_invalid_getSum();
 
+        /**
+         * @brief Tests the mathematical operation function.
+         * @par Functions tests with any positive or negative integer value, including chars and decimals
+         * Chars are ascii integers and decimals will be truncated
+         * @note Operation may overflow
+         *
+         **************************************************************************/
         void test_getAverage();
+
+        /**
+         * @brief Tests the good weather mathematical operation function scenarios.
+         *
+         **************************************************************************/
         void test_valid_getAverage();
+
+        /**
+         * @brief Tests the bad weather mathematical operation function scenarios.
+         *
+         **************************************************************************/
         void test_invalid_getAverage();
         void test_isAverageWithinDesiredMaxValue();
 
         void test_getDifference();
+
+        /**
+         * @brief Tests the good weather mathematical operation function scenarios.
+         *
+         **************************************************************************/
         void test_valid_getDifference();
+
+        /**
+         * @brief Tests the bad weather mathematical operation function scenarios.
+         *
+         **************************************************************************/
         void test_invalid_getDifference();
 
         void test_getProduct();
+
+        /**
+         * @brief Tests the good weather mathematical operation function scenarios.
+         *
+         **************************************************************************/
         void test_valid_getProduct();
+
+        /**
+         * @brief Tests the bad weather mathematical operation function scenarios.
+         *
+         **************************************************************************/
         void test_invalid_getProduct();
 
         void test_getSquareRootOfProduct();
+
+        /**
+         * @brief Tests the good weather mathematical operation function scenarios.
+         *
+         **************************************************************************/
         void test_valid_getSquareRootOfProduct();
+
+        /**
+         * @brief Tests the bad weather mathematical operation function scenarios.
+         *
+         **************************************************************************/
         void test_invalid_getSquareRootOfProduct();
         void test_isSquareRootOfProductWithinDesiredMaxValue();
+
+        /**
+         * @brief Tests the good weather mathematical operation function scenarios.
+         *
+         **************************************************************************/
         void test_valid_isSquareRootOfProductWithinDesiredMaxValue();
+
+        /**
+         * @brief Tests the bad weather mathematical operation function scenarios.
+         *
+         **************************************************************************/
         void test_invalid_isSquareRootOfProductWithinDesiredMaxValue();
 
         void test_getDividedValue();
+
+        /**
+         * @brief Tests the good weather mathematical operation function scenarios.
+         *
+         **************************************************************************/
         void test_valid_getDividedValue();
+
+        /**
+         * @brief Tests the bad weather mathematical operation function scenarios.
+         *
+         **************************************************************************/
         void test_invalid_getDividedValue();
 
         void test_calculateQuotientAndRemainder();
+
+        /**
+         * @brief Tests the good weather mathematical operation function scenarios.
+         *
+         **************************************************************************/
         void test_valid_calculateQuotientAndRemainder();
+
+        /**
+         * @brief Tests the bad weather mathematical operation function scenarios.
+         *
+         **************************************************************************/
         void test_invalid_calculateQuotientAndRemainder();
 };
