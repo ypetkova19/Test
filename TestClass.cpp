@@ -56,10 +56,6 @@
 #define TEST_CLASS_SQRT_VALID_UT2_POS_POS_VAR_1 (7)
 #define TEST_CLASS_SQRT_VALID_UT2_POS_POS_VAR_2 (7)
 
-/**
- * @brief Construct a new Test Class:: Test Class object
- * @par Initialize member variables
- *************************************************************************/
 TestClass::TestClass()
 {
     mVar1 = 0;
@@ -69,14 +65,6 @@ TestClass::TestClass()
     std::cout << std::endl << "TestClass Default Constructor created" << std::endl;
 }
 
-/**
- * @brief Construct a new Test Class:: Test Class object
- *
- * @param var1 First value in any mathematical operation
- * @param var2 Second value in any mathematical operation
- * @param max_average_value Max desired average value of above vars
- * @param max_sqrt_value Max desired square root value of the product of above vars
- **************************************************************************/
 TestClass::TestClass(int var1, int var2, int max_average_value, unsigned int max_sqrt_value): mVar1(var1), mVar2(var2), mMax_average_value(max_average_value), mMax_square_root_value(max_sqrt_value)
 {
     std::cout << "TestClass Constructor created. mVar1=" << mVar1 << ", mVar2="<< mVar2 << ", mMax_average_value="<< mMax_average_value << ", mMax_square_root_value="<< mMax_square_root_value << std::endl << std::endl;

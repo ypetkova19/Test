@@ -24,7 +24,6 @@
 ///@brief Function name macro
 #define FUNC (__func__)
 
-
 void print_log(const std::string& filename,
                int                line,
                const std::string& function,
