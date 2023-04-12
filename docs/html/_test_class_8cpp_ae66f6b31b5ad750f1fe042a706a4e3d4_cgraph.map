@@ -1,45 +1,44 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="main function for test execution" alt="" coords="5,593,56,618"/>
-<area shape="rect" id="node2" href="$_functions_8cpp.html#ab9802825bb07d45d1b36871feb634842" title="Prints the formatted message log to the console." alt="" coords="192,55,263,81"/>
-<area shape="rect" id="node3" href="$class_test_class.html#acdb914bc37ddc75d993a3497c1906837" title="Tests the mathematical operation function." alt="" coords="143,105,312,145"/>
-<area shape="rect" id="node8" href="$class_test_class.html#a8584cc5b0f527796111519020fb5362e" title="Tests the mathematical operation function." alt="" coords="137,205,318,230"/>
-<area shape="rect" id="node12" href="$class_test_class.html#aef815fdbbf0630c71e4da139d3d039a6" title="Tests the mathematical operation function." alt="" coords="131,561,323,586"/>
-<area shape="rect" id="node16" href="$class_test_class.html#ade2bd5419d1771d979ee59883b80d876" title="Tests the mathematical operation function." alt="" coords="139,617,315,657"/>
-<area shape="rect" id="node20" href="$class_test_class.html#a2065eec463690d60f9d3ae76982eee67" title="Tests the mathematical operation function." alt="" coords="675,705,855,730"/>
-<area shape="rect" id="node24" href="$class_test_class.html#a75b8e610b2260df5b77bfaa2a3fc2927" title="Tests the mathematical operation function." alt="" coords="418,796,594,836"/>
-<area shape="rect" id="node28" href="$class_test_class.html#abd04b0eda3df527b0aa76a0482f6e8ea" title="Tests the mathematical operation function." alt="" coords="146,1026,309,1051"/>
-<area shape="rect" id="node32" href="$class_test_class.html#aeb292a270d7d94b10a6f7c30b2cd3143" title="Tests whether the mathematical operation results within the desired range." alt="" coords="141,383,314,423"/>
-<area shape="rect" id="node38" href="$class_test_class.html#a07f81d2cd58c787eb60795d9cbc09f32" title="Tests whether the mathematical operation results within the desired range." alt="" coords="104,868,351,908"/>
-<area shape="rect" id="node4" href="$class_test_class.html#a4c113e7cb663069f9189f1bdbffaf42a" title="Tests the bad weather mathematical operation function scenarios." alt="" coords="399,5,613,45"/>
-<area shape="rect" id="node7" href="$class_test_class.html#a3b2fe49e8b06df66076af56b8f5e3ac6" title="Tests the good weather mathematical operation function scenarios." alt="" coords="399,69,613,109"/>
-<area shape="rect" id="node5" href="$class_functions.html#ac23145d88e45daa25af8b41469ae7079" title="Get quotient of input variables." alt="" coords="687,17,842,42"/>
-<area shape="rect" id="node6" href="$class_functions.html#aafdf8a51df412656555e86d0de9e35af" title="Get remainder of input variables." alt="" coords="681,73,848,98"/>
-<area shape="rect" id="node9" href="$class_test_class.html#a3e094abb0c429b3aed1775abdc0c099e" title="Tests the bad weather mathematical operation function scenarios." alt="" coords="430,133,582,173"/>
-<area shape="rect" id="node11" href="$class_test_class.html#af950c8db6ea4d7d463f59bcd087c4c87" title="Tests the good weather mathematical operation function scenarios." alt="" coords="435,197,577,237"/>
-<area shape="rect" id="node10" href="$class_functions.html#ab8bd1a3942b405677e3af23c3b9c19e2" title="Get average of input values." alt="" coords="689,205,840,230"/>
-<area shape="rect" id="node13" href="$class_test_class.html#a8ac89681916fd6230760507d707cc99e" title="Tests the bad weather mathematical operation function scenarios." alt="" coords="430,489,582,529"/>
-<area shape="rect" id="node15" href="$class_test_class.html#abd523bab208711910e98562149af13a1" title="Tests the good weather mathematical operation function scenarios." alt="" coords="435,553,577,593"/>
-<area shape="rect" id="node14" href="$class_functions.html#a68675a2c811a4b1416b2451075058cdb" title="Get difference of input values." alt="" coords="683,529,846,554"/>
-<area shape="rect" id="node17" href="$class_test_class.html#ad82a0904f76eac9de855781a65f6c1f0" title="Tests the bad weather mathematical operation function scenarios." alt="" coords="430,617,582,657"/>
-<area shape="rect" id="node19" href="$class_test_class.html#a88b06a71f9db00dc9b365c6e5a421d0b" title="Tests the good weather mathematical operation function scenarios." alt="" coords="435,681,577,721"/>
-<area shape="rect" id="node18" href="$class_functions.html#aac57569bf53236a9008c3f68b6b59564" title="Get result from the division operation of the input variables." alt="" coords="675,639,854,665"/>
-<area shape="rect" id="node21" href="$class_test_class.html#a5798072a8399ecc716f0cac5ec2be465" title="Tests the bad weather mathematical operation function scenarios." alt="" coords="927,691,1079,731"/>
-<area shape="rect" id="node23" href="$class_test_class.html#a048e272e5bd6e4231fe04cf82d565919" title="Tests the good weather mathematical operation function scenarios." alt="" coords="931,755,1074,795"/>
-<area shape="rect" id="node22" href="$class_functions.html#a4c651ec8dd9a8da3c93d26da1bbd16a9" title="Get product of input variables." alt="" coords="1137,762,1288,787"/>
-<area shape="rect" id="node25" href="$class_test_class.html#ab7d98f798e1c2acd2a9558e1eb6ce424" title="Tests the bad weather mathematical operation function scenarios." alt="" coords="678,755,851,795"/>
-<area shape="rect" id="node27" href="$class_test_class.html#aea9e31a8159db5a225612ac3ab44c7ce" title="Tests the good weather mathematical operation function scenarios." alt="" coords="678,819,851,859"/>
-<area shape="rect" id="node26" href="$class_functions.html#a5a5889a9b2d1081737ad60adb6ad3fa6" title="Get square root of the product of input variables." alt="" coords="916,819,1089,859"/>
-<area shape="rect" id="node29" href="$class_test_class.html#a7d998a64d677e7e0579f035d8565bf51" title="Tests the bad weather mathematical operation function scenarios." alt="" coords="430,1019,582,1059"/>
-<area shape="rect" id="node31" href="$class_test_class.html#a2c88ef6a22946db5d0ded6fefb72054e" title="Tests the good weather mathematical operation function scenarios." alt="" coords="435,1083,577,1123"/>
-<area shape="rect" id="node30" href="$class_functions.html#ae676c5362fba7d071356d7511c6ac1b3" title="Get sum of input values." alt="" coords="699,1058,831,1083"/>
-<area shape="rect" id="node33" href="$class_functions.html#acab178dc0712b6dfeb7cd3d4656a86f5" title="Get average of input values." alt="" coords="416,261,596,301"/>
-<area shape="rect" id="node35" href="$class_functions.html#a16e37d628b977b30cfda893cde929344" title="Sets param value." alt="" coords="432,325,580,365"/>
-<area shape="rect" id="node36" href="$class_functions.html#ae0af2f45b4e825bde2daeef361b42828" title="Sets param value." alt="" coords="431,390,581,415"/>
-<area shape="rect" id="node37" href="$class_functions.html#aaa43fb625e8b9be5f9c99e083e2b647b" title="Sets param value." alt="" coords="431,439,581,465"/>
-<area shape="rect" id="node34" href="$class_functions.html#aca995d620c046549f893481bdecf8b58" title="Get param value." alt="" coords="691,261,839,301"/>
-<area shape="rect" id="node39" href="$class_test_class.html#a22a2d0895a3da5550de659698ec504fd" title="Tests the bad weather mathematical operation function scenarios." alt="" coords="405,861,607,915"/>
-<area shape="rect" id="node43" href="$class_test_class.html#a5a9f762f9e7027c51cbad410a9369002" title="Tests the good weather mathematical operation function scenarios." alt="" coords="405,939,607,994"/>
-<area shape="rect" id="node40" href="$class_functions.html#a89cd209388431e473efdc61057f79f21" title="Returns flag indicating whether calculated sqrt value for input variables is within desired max range..." alt="" coords="661,883,868,923"/>
-<area shape="rect" id="node42" href="$class_functions.html#afe60173428aaabcf33e8e2f1b1451150" title="Sets param value." alt="" coords="691,947,839,987"/>
-<area shape="rect" id="node41" href="$class_functions.html#a9fb6b53066047b8c5385d8cf4edec2cb" title="Get param value." alt="" coords="929,883,1077,923"/>
+<area shape="rect" id="node1" title="main function for test execution" alt="" coords="5,657,56,682"/>
+<area shape="rect" id="node2" href="$class_test_class.html#acdb914bc37ddc75d993a3497c1906837" title="Tests the mathematical operation function." alt="" coords="143,69,312,109"/>
+<area shape="rect" id="node7" href="$class_test_class.html#a8584cc5b0f527796111519020fb5362e" title="Tests the mathematical operation function." alt="" coords="137,205,318,230"/>
+<area shape="rect" id="node11" href="$class_test_class.html#aef815fdbbf0630c71e4da139d3d039a6" title="Tests the mathematical operation function." alt="" coords="131,561,323,586"/>
+<area shape="rect" id="node15" href="$class_test_class.html#ade2bd5419d1771d979ee59883b80d876" title="Tests the mathematical operation function." alt="" coords="139,649,315,689"/>
+<area shape="rect" id="node19" href="$class_test_class.html#a2065eec463690d60f9d3ae76982eee67" title="Tests the mathematical operation function." alt="" coords="675,705,855,730"/>
+<area shape="rect" id="node23" href="$class_test_class.html#a75b8e610b2260df5b77bfaa2a3fc2927" title="Tests the mathematical operation function." alt="" coords="418,796,594,836"/>
+<area shape="rect" id="node27" href="$class_test_class.html#abd04b0eda3df527b0aa76a0482f6e8ea" title="Tests the mathematical operation function." alt="" coords="146,1026,309,1051"/>
+<area shape="rect" id="node31" href="$class_test_class.html#aeb292a270d7d94b10a6f7c30b2cd3143" title="Tests whether the mathematical operation results within the desired range." alt="" coords="141,383,314,423"/>
+<area shape="rect" id="node37" href="$class_test_class.html#a07f81d2cd58c787eb60795d9cbc09f32" title="Tests whether the mathematical operation results within the desired range." alt="" coords="104,868,351,908"/>
+<area shape="rect" id="node3" href="$class_test_class.html#a4c113e7cb663069f9189f1bdbffaf42a" title="Tests the bad weather mathematical operation function scenarios." alt="" coords="399,5,613,45"/>
+<area shape="rect" id="node6" href="$class_test_class.html#a3b2fe49e8b06df66076af56b8f5e3ac6" title="Tests the good weather mathematical operation function scenarios." alt="" coords="399,69,613,109"/>
+<area shape="rect" id="node4" href="$class_functions.html#ac23145d88e45daa25af8b41469ae7079" title="Get quotient of input variables." alt="" coords="687,17,842,42"/>
+<area shape="rect" id="node5" href="$class_functions.html#aafdf8a51df412656555e86d0de9e35af" title="Get remainder of input variables." alt="" coords="681,73,848,98"/>
+<area shape="rect" id="node8" href="$class_test_class.html#a3e094abb0c429b3aed1775abdc0c099e" title="Tests the bad weather mathematical operation function scenarios." alt="" coords="430,133,582,173"/>
+<area shape="rect" id="node10" href="$class_test_class.html#af950c8db6ea4d7d463f59bcd087c4c87" title="Tests the good weather mathematical operation function scenarios." alt="" coords="435,197,577,237"/>
+<area shape="rect" id="node9" href="$class_functions.html#ab8bd1a3942b405677e3af23c3b9c19e2" title="Get average of input values." alt="" coords="689,205,840,230"/>
+<area shape="rect" id="node12" href="$class_test_class.html#a8ac89681916fd6230760507d707cc99e" title="Tests the bad weather mathematical operation function scenarios." alt="" coords="430,489,582,529"/>
+<area shape="rect" id="node14" href="$class_test_class.html#abd523bab208711910e98562149af13a1" title="Tests the good weather mathematical operation function scenarios." alt="" coords="435,553,577,593"/>
+<area shape="rect" id="node13" href="$class_functions.html#a68675a2c811a4b1416b2451075058cdb" title="Get difference of input values." alt="" coords="683,529,846,554"/>
+<area shape="rect" id="node16" href="$class_test_class.html#ad82a0904f76eac9de855781a65f6c1f0" title="Tests the bad weather mathematical operation function scenarios." alt="" coords="430,617,582,657"/>
+<area shape="rect" id="node18" href="$class_test_class.html#a88b06a71f9db00dc9b365c6e5a421d0b" title="Tests the good weather mathematical operation function scenarios." alt="" coords="435,681,577,721"/>
+<area shape="rect" id="node17" href="$class_functions.html#aac57569bf53236a9008c3f68b6b59564" title="Get result from the division operation of the input variables." alt="" coords="675,639,854,665"/>
+<area shape="rect" id="node20" href="$class_test_class.html#a5798072a8399ecc716f0cac5ec2be465" title="Tests the bad weather mathematical operation function scenarios." alt="" coords="927,691,1079,731"/>
+<area shape="rect" id="node22" href="$class_test_class.html#a048e272e5bd6e4231fe04cf82d565919" title="Tests the good weather mathematical operation function scenarios." alt="" coords="931,755,1074,795"/>
+<area shape="rect" id="node21" href="$class_functions.html#a4c651ec8dd9a8da3c93d26da1bbd16a9" title="Get product of input variables." alt="" coords="1137,762,1288,787"/>
+<area shape="rect" id="node24" href="$class_test_class.html#ab7d98f798e1c2acd2a9558e1eb6ce424" title="Tests the bad weather mathematical operation function scenarios." alt="" coords="678,755,851,795"/>
+<area shape="rect" id="node26" href="$class_test_class.html#aea9e31a8159db5a225612ac3ab44c7ce" title="Tests the good weather mathematical operation function scenarios." alt="" coords="678,819,851,859"/>
+<area shape="rect" id="node25" href="$class_functions.html#a5a5889a9b2d1081737ad60adb6ad3fa6" title="Get square root of the product of input variables." alt="" coords="916,819,1089,859"/>
+<area shape="rect" id="node28" href="$class_test_class.html#a7d998a64d677e7e0579f035d8565bf51" title="Tests the bad weather mathematical operation function scenarios." alt="" coords="430,1019,582,1059"/>
+<area shape="rect" id="node30" href="$class_test_class.html#a2c88ef6a22946db5d0ded6fefb72054e" title="Tests the good weather mathematical operation function scenarios." alt="" coords="435,1083,577,1123"/>
+<area shape="rect" id="node29" href="$class_functions.html#ae676c5362fba7d071356d7511c6ac1b3" title="Get sum of input values." alt="" coords="699,1058,831,1083"/>
+<area shape="rect" id="node32" href="$class_functions.html#acab178dc0712b6dfeb7cd3d4656a86f5" title="Get average of input values." alt="" coords="416,261,596,301"/>
+<area shape="rect" id="node34" href="$class_functions.html#a16e37d628b977b30cfda893cde929344" title="Sets param value." alt="" coords="432,325,580,365"/>
+<area shape="rect" id="node35" href="$class_functions.html#ae0af2f45b4e825bde2daeef361b42828" title="Sets param value." alt="" coords="431,390,581,415"/>
+<area shape="rect" id="node36" href="$class_functions.html#aaa43fb625e8b9be5f9c99e083e2b647b" title="Sets param value." alt="" coords="431,439,581,465"/>
+<area shape="rect" id="node33" href="$class_functions.html#aca995d620c046549f893481bdecf8b58" title="Get param value." alt="" coords="691,261,839,301"/>
+<area shape="rect" id="node38" href="$class_test_class.html#a22a2d0895a3da5550de659698ec504fd" title="Tests the bad weather mathematical operation function scenarios." alt="" coords="405,861,607,915"/>
+<area shape="rect" id="node42" href="$class_test_class.html#a5a9f762f9e7027c51cbad410a9369002" title="Tests the good weather mathematical operation function scenarios." alt="" coords="405,939,607,994"/>
+<area shape="rect" id="node39" href="$class_functions.html#a89cd209388431e473efdc61057f79f21" title="Returns flag indicating whether calculated sqrt value for input variables is within desired max range..." alt="" coords="661,883,868,923"/>
+<area shape="rect" id="node41" href="$class_functions.html#afe60173428aaabcf33e8e2f1b1451150" title="Sets param value." alt="" coords="691,947,839,987"/>
+<area shape="rect" id="node40" href="$class_functions.html#a9fb6b53066047b8c5385d8cf4edec2cb" title="Get param value." alt="" coords="929,883,1077,923"/>
 </map>

@@ -14,7 +14,7 @@
 #include <cmath>
 #include <stdexcept>
 
-#include "Functions.hpp"
+#include "../include/Functions.hpp"
 
 #ifndef FUNCTIONS_HPP_INCLUDED
 #define FUNCTIONS_HPP_INCLUDED

@@ -15,8 +15,8 @@
 #include <stdexcept>
 #include <limits>
 
-#include "Functions.hpp"
-#include "TestClass.hpp"
+#include "../include/Functions.hpp"
+#include "../include/TestClass.hpp"
 
 #ifndef TESTCLASS_HPP_INCLUDED
 #define TESTCLASS_HPP_INCLUDED
