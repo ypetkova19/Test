@@ -9,6 +9,8 @@
  *
  */
 #include <iostream>
+//no source file access //libraries //compiled HPP + CPP files creates: target file
+//makefile = hpp + cpp creates a library (eg. cmath)
 #include <cmath>
 #include <stdexcept>
 

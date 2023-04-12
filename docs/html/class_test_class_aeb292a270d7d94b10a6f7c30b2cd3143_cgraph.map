@@ -1,0 +1,9 @@
+<map id="TestClass::test_isAverageWithinDesiredMaxValue" name="TestClass::test_isAverageWithinDesiredMaxValue">
+<area shape="rect" id="node1" title="Tests whether the mathematical operation results within the desired range." alt="" coords="5,127,179,167"/>
+<area shape="rect" id="node2" href="$class_functions.html#acab178dc0712b6dfeb7cd3d4656a86f5" title="Get average of input values." alt="" coords="227,33,407,73"/>
+<area shape="rect" id="node5" href="$class_functions.html#a16e37d628b977b30cfda893cde929344" title="Sets param value." alt="" coords="243,97,391,137"/>
+<area shape="rect" id="node6" href="$class_functions.html#ae0af2f45b4e825bde2daeef361b42828" title="Sets param value." alt="" coords="241,162,392,187"/>
+<area shape="rect" id="node7" href="$class_functions.html#aaa43fb625e8b9be5f9c99e083e2b647b" title="Sets param value." alt="" coords="241,211,392,237"/>
+<area shape="rect" id="node3" href="$class_functions.html#aca995d620c046549f893481bdecf8b58" title="Get param value." alt="" coords="456,5,604,45"/>
+<area shape="rect" id="node4" href="$class_functions.html#ab8bd1a3942b405677e3af23c3b9c19e2" title="Get average of input values." alt="" coords="455,70,605,95"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="TestClass::test_getSum" name="TestClass::test_getSum">
+<area shape="rect" id="node1" title="Tests the mathematical operation function." alt="" coords="5,45,168,70"/>
+<area shape="rect" id="node2" href="$class_test_class.html#a7d998a64d677e7e0579f035d8565bf51" title="Tests the bad weather mathematical operation function scenarios." alt="" coords="216,5,368,45"/>
+<area shape="rect" id="node4" href="$class_test_class.html#a2c88ef6a22946db5d0ded6fefb72054e" title="Tests the good weather mathematical operation function scenarios." alt="" coords="221,69,363,109"/>
+<area shape="rect" id="node3" href="$class_functions.html#ae676c5362fba7d071356d7511c6ac1b3" title="Get sum of input values." alt="" coords="416,45,548,70"/>
+</map>

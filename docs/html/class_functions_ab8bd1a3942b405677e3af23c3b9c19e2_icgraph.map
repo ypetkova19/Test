@@ -1,0 +1,9 @@
+<map id="Functions::getAverage" name="Functions::getAverage">
+<area shape="rect" id="node1" title="Get average of input values." alt="" coords="561,77,712,102"/>
+<area shape="rect" id="node2" href="$class_functions.html#acab178dc0712b6dfeb7cd3d4656a86f5" title="Get average of input values." alt="" coords="333,5,513,45"/>
+<area shape="rect" id="node5" href="$class_test_class.html#a3e094abb0c429b3aed1775abdc0c099e" title="Tests the bad weather mathematical operation function scenarios." alt="" coords="347,69,499,109"/>
+<area shape="rect" id="node7" href="$class_test_class.html#af950c8db6ea4d7d463f59bcd087c4c87" title="Tests the good weather mathematical operation function scenarios." alt="" coords="352,133,495,173"/>
+<area shape="rect" id="node3" href="$class_test_class.html#aeb292a270d7d94b10a6f7c30b2cd3143" title="Tests whether the mathematical operation results within the desired range." alt="" coords="108,9,281,49"/>
+<area shape="rect" id="node4" href="$_test_class_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main function for test execution" alt="" coords="5,49,56,74"/>
+<area shape="rect" id="node6" href="$class_test_class.html#a8584cc5b0f527796111519020fb5362e" title="Tests the mathematical operation function." alt="" coords="104,77,285,102"/>
+</map>

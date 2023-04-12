@@ -1044,7 +1044,7 @@ void TestClass::test_invalid_calculateQuotientAndRemainder()
  *************************************************************************/
 int main()
 {
-    print_log(FILE, LINE, "Test print");
+    print_log(FILE, LINE, FUNC, "Test print");
 
     TestClass myTest;
     myTest.test_getSum();
