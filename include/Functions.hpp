@@ -1,8 +1,13 @@
-/************************************************
- * File       : Functions.hpp
- * Description: This file contains function
- *              prototypes.
- ************************************************/
+/**
+ * @file Functions.hpp
+ * @author Yolina Petkova (yolina.petkova@strypes.eu)
+ * @brief This file contains function prototypes.
+ * @version 0.1
+ * @date 2023-04-13
+ *
+ * @copyright Copyright (c) 2023
+ *
+ *************************************************************************/
 #include <string>
 
 /// @brief Log length max
