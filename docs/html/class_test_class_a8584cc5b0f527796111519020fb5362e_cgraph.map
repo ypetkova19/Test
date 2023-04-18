@@ -1,0 +1,6 @@
+<map id="TestClass::test_getAverage" name="TestClass::test_getAverage">
+<area shape="rect" id="node1" title="Tests the mathematical operation function." alt="" coords="5,45,187,70"/>
+<area shape="rect" id="node2" href="$class_test_class.html#a3e094abb0c429b3aed1775abdc0c099e" title="Tests the bad weather mathematical operation function scenarios." alt="" coords="235,5,387,45"/>
+<area shape="rect" id="node4" href="$class_test_class.html#af950c8db6ea4d7d463f59bcd087c4c87" title="Tests the good weather mathematical operation function scenarios." alt="" coords="239,69,382,109"/>
+<area shape="rect" id="node3" href="$class_functions.html#ab8bd1a3942b405677e3af23c3b9c19e2" title="Get average of input values." alt="" coords="435,45,585,70"/>
+</map>

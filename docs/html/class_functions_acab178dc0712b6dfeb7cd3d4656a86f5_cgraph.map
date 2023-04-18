@@ -1,0 +1,5 @@
+<map id="Functions::isAverageWithinDesiredMaxValue" name="Functions::isAverageWithinDesiredMaxValue">
+<area shape="rect" id="node1" title="Get average of input values." alt="" coords="5,35,185,75"/>
+<area shape="rect" id="node2" href="$class_functions.html#aca995d620c046549f893481bdecf8b58" title="Get param value." alt="" coords="235,5,383,45"/>
+<area shape="rect" id="node3" href="$class_functions.html#ab8bd1a3942b405677e3af23c3b9c19e2" title="Get average of input values." alt="" coords="233,70,384,95"/>
+</map>

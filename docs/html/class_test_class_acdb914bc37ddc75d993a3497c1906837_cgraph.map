@@ -1,0 +1,7 @@
+<map id="TestClass::test_calculateQuotientAndRemainder" name="TestClass::test_calculateQuotientAndRemainder">
+<area shape="rect" id="node1" title="Tests the mathematical operation function." alt="" coords="5,37,175,77"/>
+<area shape="rect" id="node2" href="$class_test_class.html#a4c113e7cb663069f9189f1bdbffaf42a" title="Tests the bad weather mathematical operation function scenarios." alt="" coords="223,5,437,45"/>
+<area shape="rect" id="node5" href="$class_test_class.html#a3b2fe49e8b06df66076af56b8f5e3ac6" title="Tests the good weather mathematical operation function scenarios." alt="" coords="223,69,437,109"/>
+<area shape="rect" id="node3" href="$class_functions.html#ac23145d88e45daa25af8b41469ae7079" title="Get quotient of input variables." alt="" coords="491,17,646,42"/>
+<area shape="rect" id="node4" href="$class_functions.html#aafdf8a51df412656555e86d0de9e35af" title="Get remainder of input variables." alt="" coords="485,70,652,95"/>
+</map>

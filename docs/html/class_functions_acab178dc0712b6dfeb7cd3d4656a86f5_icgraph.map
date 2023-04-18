@@ -1,0 +1,5 @@
+<map id="Functions::isAverageWithinDesiredMaxValue" name="Functions::isAverageWithinDesiredMaxValue">
+<area shape="rect" id="node1" title="Get average of input values." alt="" coords="325,5,505,45"/>
+<area shape="rect" id="node2" href="$class_test_class.html#aeb292a270d7d94b10a6f7c30b2cd3143" title="Tests whether the mathematical operation results within the desired range." alt="" coords="104,5,277,45"/>
+<area shape="rect" id="node3" href="$_test_class_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main function for test execution" alt="" coords="5,13,56,38"/>
+</map>
